@@ -1,0 +1,26 @@
+.banner {
+  background-color: var(--bs-danger);
+  color: var(--bs-white);
+  padding: 12px 20px;
+  text-align: center;
+  font-family: var(--bs-body-font-family);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.banner a {
+  color: var(--bs-white);
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.banner a:hover {
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .banner {
+    font-size: 13px;
+    padding: 10px 15px;
+  }
+}
