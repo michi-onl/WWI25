@@ -14,10 +14,16 @@ header {
   top: 0;
 }
 
+button {
+  border-radius: 28px !important;
+}
+
 .nav-link.active {
   background-color: var(--bs-primary) !important;
-  border-radius: 128px !important;
+  border-radius: 28px !important;
 }
+
+/**** BANNER ****/
 
 .banner {
   background-color: var(--bs-danger);
@@ -46,16 +52,17 @@ header {
   }
 }
 
+/**** GLASS ****/
+
 .glass {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 128px;
+  border-radius: 28px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Light mode variant */
 @media (prefers-color-scheme: light) {
   .glass {
     background: rgba(255, 255, 255, 0.7);
@@ -63,7 +70,6 @@ header {
   }
 }
 
-/* Dark mode variant */
 @media (prefers-color-scheme: dark) {
   .glass {
     background: rgba(0, 0, 0, 0.3);
