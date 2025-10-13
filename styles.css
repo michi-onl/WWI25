@@ -1,6 +1,24 @@
+@font-face {
+  font-family: "Geist";
+  src: url("./fonts/Geist.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Geist";
+  src: url("./fonts/Geist-Italic.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: italic;
+}
+
 :root {
   --bs-primary: #146937 !important;
   --bs-primary-rgb: 20, 105, 55;
+}
+
+* {
+  font-family: "Geist", sans-serif !important;
 }
 
 @media (prefers-color-scheme: light) {
