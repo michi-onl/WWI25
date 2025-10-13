@@ -1,3 +1,24 @@
+:root {
+  --bs-primary: #146937 !important;
+  --bs-primary-rgb: 20, 105, 55;
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: #f8faf2 !important;
+  }
+}
+
+header {
+  position: sticky;
+  top: 0;
+}
+
+.nav-link.active {
+  background-color: var(--bs-primary) !important;
+  border-radius: 128px !important;
+}
+
 .banner {
   background-color: var(--bs-danger);
   color: var(--bs-white);
@@ -22,5 +43,30 @@
   .banner {
     font-size: 13px;
     padding: 10px 15px;
+  }
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 128px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Light mode variant */
+@media (prefers-color-scheme: light) {
+  .glass {
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+}
+
+/* Dark mode variant */
+@media (prefers-color-scheme: dark) {
+  .glass {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
 }
