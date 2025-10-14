@@ -13,7 +13,7 @@
 }
 
 :root {
-  --bs-primary: #146937 !important;
+  --bs-primary: oklch(0.4598 0.1116 152.04) !important;
   --bs-primary-rgb: 20, 105, 55;
 }
 
@@ -23,7 +23,21 @@
 
 @media (prefers-color-scheme: light) {
   body {
-    background-color: #f8faf2 !important;
+    background-color: oklch(0.9814 0.0107 118.02) !important;
+  }
+
+  footer {
+    background-color: oklch(0.96 0.0107 118.02);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: oklch(0.2814 0.0107 118.02) !important;
+  }
+
+  footer {
+    background-color: oklch(0.26 0.0107 118.02);
   }
 }
 
