@@ -153,7 +153,166 @@
       </div>
     </nav>
 
-    <main>Dein nachhaltiges Zuhause im Studium</main>
+    <main class="container py-5">
+      <div class="mb-5">
+        <h1 class="display-4 fw-bold mb-3">Bewerbung</h1>
+        <p class="fs-5 text-muted">
+          Fülle das Formular aus und werde Teil unserer nachhaltigen Community
+        </p>
+      </div>
+
+      <div class="card border">
+        <div class="card-header border-bottom">
+          <h2 class="h5 mb-0">Persönliche Informationen</h2>
+        </div>
+        <div class="card-body">
+          <form action="#" method="post">
+            <div class="row g-3 mb-3">
+              <div class="col-md-6">
+                <label for="firstName" class="form-label">Vorname *</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstName"
+                  required
+                />
+              </div>
+              <div class="col-md-6">
+                <label for="lastName" class="form-label">Nachname *</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lastName"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="email" class="form-label">E-Mail *</label>
+              <input type="email" class="form-control" id="email" required />
+            </div>
+
+            <div class="mb-3">
+              <label for="phone" class="form-label">Telefon *</label>
+              <input type="tel" class="form-control" id="phone" required />
+            </div>
+
+            <div class="mb-3">
+              <label for="university" class="form-label">Hochschule *</label>
+              <input
+                type="text"
+                class="form-control"
+                id="university"
+                required
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="studyProgram" class="form-label">Studiengang *</label>
+              <input
+                type="text"
+                class="form-control"
+                id="studyProgram"
+                required
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="semester" class="form-label">Semester *</label>
+              <select class="form-select" id="semester" required>
+                <option value="" selected disabled>Wähle dein Semester</option>
+                <option value="1">1. Semester</option>
+                <option value="2">2. Semester</option>
+                <option value="3">3. Semester</option>
+                <option value="4">4. Semester</option>
+                <option value="5">5. Semester</option>
+                <option value="6+">6+ Semester</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="location" class="form-label"
+                >Bevorzugter Standort *</label
+              >
+              <select class="form-select" id="location" required>
+                <option value="" selected disabled>Wähle einen Standort</option>
+                <option value="ulm-westend">Ulm Westend</option>
+                <option value="ulm-soeflingen">Ulm Söflingen</option>
+                <option value="ulm-wiblingen">Ulm Wiblingen</option>
+                <option value="heidenheim-innenstadt">
+                  Heidenheim Innenstadt
+                </option>
+                <option value="heidenheim-schnaitheim">
+                  Heidenheim Schnaitheim
+                </option>
+                <option value="aalen-innenstadt">Aalen Innenstadt</option>
+                <option value="aalen-hofherrnweiler">
+                  Aalen Hofherrnweiler
+                </option>
+                <option value="brenz">Herbrechtingen (Brenz)</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="moveIn" class="form-label"
+                >Gewünschter Einzugstermin *</label
+              >
+              <input type="date" class="form-control" id="moveIn" required />
+            </div>
+
+            <div class="mb-3">
+              <label for="motivation" class="form-label"
+                >Warum möchtest du bei GrünWohnen leben? *</label
+              >
+              <textarea
+                class="form-control"
+                id="motivation"
+                rows="5"
+                placeholder="Erzähle uns, warum nachhaltiges Wohnen für dich wichtig ist..."
+                required
+              ></textarea>
+            </div>
+
+            <div class="mb-3">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="terms"
+                  required
+                />
+                <label class="form-check-label text-muted small" for="terms">
+                  Ich akzeptiere die Datenschutzbestimmungen und stimme der
+                  Verarbeitung meiner Daten zu. *
+                </label>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="newsletter"
+                />
+                <label
+                  class="form-check-label text-muted small"
+                  for="newsletter"
+                >
+                  Ich möchte Updates über verfügbare Apartments und
+                  Nachhaltigkeits-Tipps erhalten.
+                </label>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg w-100">
+              Bewerbung absenden
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
 
     <footer class="border-top border-dark-subtle mt-5">
       <div class="container py-5">

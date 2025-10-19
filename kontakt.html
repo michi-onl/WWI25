@@ -153,7 +153,146 @@
       </div>
     </nav>
 
-    <main>Dein nachhaltiges Zuhause im Studium</main>
+    <main class="container py-5">
+      <div class="mb-5 text-center">
+        <h1 class="display-4 fw-bold mb-3">Kontakt</h1>
+        <p class="fs-5 text-muted mx-auto" style="max-width: 42rem">
+          Hast du Fragen? Wir sind für dich da!
+        </p>
+      </div>
+
+      <div class="row g-4 mx-auto" style="max-width: 80rem">
+        <div class="col-md-6">
+          <div class="mb-4">
+            <div class="card border">
+              <div class="card-header border-bottom">
+                <h2 class="h5 mb-0">Kontaktinformationen</h2>
+              </div>
+              <div class="card-body">
+                <div class="d-flex gap-3 mb-4">
+                  <div class="contact-icon-wrapper flex-shrink-0">
+                    <i class="ri-mail-line fs-5"></i>
+                  </div>
+                  <div>
+                    <h3 class="fw-semibold mb-1 h6">E-Mail</h3>
+                    <a
+                      href="mailto:info@gruenwohnen.de"
+                      class="text-muted text-decoration-none contact-link"
+                    >
+                      info@gruenwohnen.de
+                    </a>
+                  </div>
+                </div>
+
+                <div class="d-flex gap-3 mb-4">
+                  <div class="contact-icon-wrapper flex-shrink-0">
+                    <i class="ri-phone-line fs-5"></i>
+                  </div>
+                  <div>
+                    <h3 class="fw-semibold mb-1 h6">Telefon</h3>
+                    <a
+                      href="tel:+493012345678"
+                      class="text-muted text-decoration-none contact-link d-block"
+                    >
+                      +49 30 1234 5678
+                    </a>
+                    <p class="small text-muted mt-1 mb-0">
+                      Mo-Fr: 9:00 - 18:00 Uhr
+                    </p>
+                  </div>
+                </div>
+
+                <div class="d-flex gap-3">
+                  <div class="contact-icon-wrapper flex-shrink-0">
+                    <i class="ri-map-pin-line fs-5"></i>
+                  </div>
+                  <div>
+                    <h3 class="fw-semibold mb-1 h6">Büro</h3>
+                    <p class="text-muted mb-0">
+                      Sedanstraße 47<br />
+                      89077 Ulm
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card border">
+            <div class="card-header border-bottom">
+              <h2 class="h5 mb-0">Öffnungszeiten</h2>
+            </div>
+            <div class="card-body">
+              <div class="small">
+                <div class="d-flex justify-content-between mb-2">
+                  <span class="text-muted">Montag - Freitag</span>
+                  <span class="fw-medium">9:00 - 18:00</span>
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                  <span class="text-muted">Samstag</span>
+                  <span class="fw-medium">10:00 - 14:00</span>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <span class="text-muted">Sonntag</span>
+                  <span class="fw-medium">Geschlossen</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card border">
+            <div class="card-header border-bottom">
+              <h2 class="h5 mb-0">Nachricht senden</h2>
+            </div>
+            <div class="card-body">
+              <form action="#" method="post">
+                <div class="mb-3">
+                  <label for="name" class="form-label">Name *</label>
+                  <input type="text" class="form-control" id="name" required />
+                </div>
+
+                <div class="mb-3">
+                  <label for="email" class="form-label">E-Mail *</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    required
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label for="subject" class="form-label">Betreff *</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="subject"
+                    required
+                  />
+                </div>
+
+                <div class="mb-4">
+                  <label for="message" class="form-label">Nachricht *</label>
+                  <textarea
+                    class="form-control"
+                    id="message"
+                    rows="5"
+                    placeholder="Deine Nachricht..."
+                    required
+                  ></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100">
+                  Nachricht senden
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
 
     <footer class="border-top border-dark-subtle mt-5">
       <div class="container py-5">
