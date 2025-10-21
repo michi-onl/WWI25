@@ -60,15 +60,15 @@
 
 nav {
   position: sticky !important;
-  top: 0 !important;
+  top: 0.5rem !important;
   z-index: 9999;
 }
 
-button {
+/* Bootstrap Overrides */
+
+.navbar-toggler {
   border-radius: 28px !important;
 }
-
-/* Bootstrap Overrides */
 
 .btn-primary {
   border-radius: 28px !important;
@@ -306,4 +306,67 @@ button {
 
 .card-header {
   border-radius: 12px 12px 0 0 !important;
+}
+
+/**** FAQ Page ****/
+.accordion-flush .faq-item {
+  border: 1px solid var(--border) !important;
+  border-radius: 28px !important;
+  overflow: hidden;
+}
+
+.accordion-flush .faq-item .accordion-button {
+  background-color: transparent;
+  border: none;
+  padding: 1.25rem 1.5rem;
+  text-align: left;
+}
+
+.accordion-flush .faq-item .accordion-button:not(.collapsed) {
+  background-color: transparent;
+  color: inherit;
+  box-shadow: none;
+}
+
+.accordion-flush .faq-item .accordion-button:focus {
+  border-color: var(--border);
+  box-shadow: none;
+}
+
+.accordion-flush .faq-item .accordion-button::after {
+  background-image: none;
+  content: "+";
+  font-size: 1.5rem;
+  font-weight: 300;
+  flex-shrink: 0;
+  width: auto;
+  height: auto;
+  margin-left: auto;
+  color: var(--primary);
+}
+
+.accordion-flush .faq-item .accordion-button:not(.collapsed)::after {
+  content: "−";
+  transform: none;
+}
+
+.accordion-flush .faq-item .accordion-body {
+  padding: 0 1.5rem 1.25rem 1.5rem;
+}
+
+.accordion-flush .faq-item .accordion-collapse {
+  transition: height 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.faq-cta-box {
+  background-color: var(--border);
+}
+
+.faq-link {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.faq-link:hover {
+  text-decoration: underline;
 }

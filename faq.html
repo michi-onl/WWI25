@@ -51,7 +51,7 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg glass m-2">
+    <nav class="navbar navbar-expand-lg glass mx-2">
       <div class="container-fluid d-flex flex-wrap">
         <a
           href="/"
@@ -153,7 +153,306 @@
       </div>
     </nav>
 
-    <main>Dein nachhaltiges Zuhause im Studium</main>
+    <main class="container py-5">
+      <div class="mb-5">
+        <h1 class="display-4 fw-bold mb-3">Häufig gestellte Fragen</h1>
+        <p class="fs-5 text-muted">
+          Hier findest du Antworten auf die wichtigsten Fragen rund um
+          GrünWohnen
+        </p>
+      </div>
+
+      <div class="accordion accordion-flush" id="faqAccordion">
+        <!-- FAQ 1 -->
+        <div class="accordion-item faq-item mb-3">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed fw-semibold"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="false"
+              aria-controls="collapseOne"
+            >
+              Wie hoch sind die monatlichen Kosten?
+            </button>
+          </h2>
+          <div
+            id="collapseOne"
+            class="accordion-collapse collapse"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body text-muted lh-base">
+              Die Miete variiert je nach Standort und Zimmergröße zwischen 390€
+              und 510€ pro Monat. Alle Nebenkosten (Strom, Heizung, Internet,
+              GEZ) sind bereits inklusive. Es gibt keine versteckten Kosten.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="accordion-item faq-item mb-3">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed fw-semibold"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo"
+              aria-expanded="false"
+              aria-controls="collapseTwo"
+            >
+              Wie wird die CO₂-Bilanz berechnet?
+            </button>
+          </h2>
+          <div
+            id="collapseTwo"
+            class="accordion-collapse collapse"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body text-muted lh-base">
+              Wir berechnen die CO₂-Bilanz basierend auf dem Energieverbrauch
+              des Gebäudes (Heizung, Warmwasser, Strom), der Bauweise und der
+              durchschnittlichen Mobilität unserer Bewohner*innen. Die Werte
+              werden jährlich von einem unabhängigen Institut zertifiziert.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="accordion-item faq-item mb-3">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed fw-semibold"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseThree"
+              aria-expanded="false"
+              aria-controls="collapseThree"
+            >
+              Ist ein Semesterticket erforderlich?
+            </button>
+          </h2>
+          <div
+            id="collapseThree"
+            class="accordion-collapse collapse"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body text-muted lh-base">
+              Nein, ein Semesterticket ist nicht erforderlich, aber sehr
+              empfehlenswert. Alle unsere Standorte sind optimal an den ÖPNV
+              angebunden. Viele unserer Bewohner*innen nutzen auch unsere
+              Fahrrad- und E-Bike-Sharing-Angebote.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="accordion-item faq-item mb-3">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed fw-semibold"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseFour"
+              aria-expanded="false"
+              aria-controls="collapseFour"
+            >
+              Wie lange ist die Mindestmietdauer?
+            </button>
+          </h2>
+          <div
+            id="collapseFour"
+            class="accordion-collapse collapse"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body text-muted lh-base">
+              Die Mindestmietdauer beträgt 6 Monate. Danach kannst du monatlich
+              kündigen. Für längere Aufenthalte bieten wir Rabatte an.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="accordion-item faq-item mb-3">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed fw-semibold"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseFive"
+              aria-expanded="false"
+              aria-controls="collapseFive"
+            >
+              Sind Haustiere erlaubt?
+            </button>
+          </h2>
+          <div
+            id="collapseFive"
+            class="accordion-collapse collapse"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body text-muted lh-base">
+              Kleine Haustiere wie Hamster oder Fische sind nach Absprache
+              erlaubt. Für Katzen und Hunde benötigen wir die Zustimmung aller
+              Mitbewohner*innen in der WG.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="accordion-item faq-item mb-3">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed fw-semibold"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseSix"
+              aria-expanded="false"
+              aria-controls="collapseSix"
+            >
+              Welche Möbel sind vorhanden?
+            </button>
+          </h2>
+          <div
+            id="collapseSix"
+            class="accordion-collapse collapse"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body text-muted lh-base">
+              Alle Zimmer sind vollmöbliert mit Bett, Schreibtisch, Stuhl,
+              Kleiderschrank und Regal. Die Gemeinschaftsräume sind ebenfalls
+              komplett ausgestattet mit Küche, Waschmaschine und
+              Wohnzimmermöbeln.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 7 -->
+        <div class="accordion-item faq-item mb-3">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed fw-semibold"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseSeven"
+              aria-expanded="false"
+              aria-controls="collapseSeven"
+            >
+              Gibt es eine Kaution?
+            </button>
+          </h2>
+          <div
+            id="collapseSeven"
+            class="accordion-collapse collapse"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body text-muted lh-base">
+              Ja, die Kaution beträgt zwei Monatsmieten und wird bei Auszug
+              vollständig zurückerstattet, sofern keine Schäden vorliegen.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 8 -->
+        <div class="accordion-item faq-item mb-3">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed fw-semibold"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseEight"
+              aria-expanded="false"
+              aria-controls="collapseEight"
+            >
+              Wie funktioniert der Bewerbungsprozess?
+            </button>
+          </h2>
+          <div
+            id="collapseEight"
+            class="accordion-collapse collapse"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body text-muted lh-base">
+              Nach deiner Online-Bewerbung prüfen wir deine Unterlagen innerhalb
+              von 3 Werktagen. Bei Interesse laden wir dich zu einem
+              Besichtigungstermin ein, bei dem du auch deine zukünftigen
+              Mitbewohner*innen kennenlernst.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 9 -->
+        <div class="accordion-item faq-item mb-3">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed fw-semibold"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseNine"
+              aria-expanded="false"
+              aria-controls="collapseNine"
+            >
+              Welche Nachhaltigkeitsmaßnahmen gibt es konkret?
+            </button>
+          </h2>
+          <div
+            id="collapseNine"
+            class="accordion-collapse collapse"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body text-muted lh-base">
+              Alle Gebäude werden mit 100% Ökostrom versorgt, haben Solaranlagen
+              auf dem Dach, Regenwassernutzung, begrünte Dächer, ein umfassendes
+              Recycling-System und energieeffiziente Heizungen. Zudem fördern
+              wir nachhaltige Mobilität durch Fahrrad-Sharing und
+              E-Bike-Stationen.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 10 -->
+        <div class="accordion-item faq-item mb-3">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed fw-semibold"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTen"
+              aria-expanded="false"
+              aria-controls="collapseTen"
+            >
+              Kann ich mein Zimmer besichtigen?
+            </button>
+          </h2>
+          <div
+            id="collapseTen"
+            class="accordion-collapse collapse"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body text-muted lh-base">
+              Ja, nach erfolgreicher Bewerbung vereinbaren wir einen
+              Besichtigungstermin. Dabei kannst du das Zimmer, die
+              Gemeinschaftsräume und die Umgebung kennenlernen.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact CTA -->
+      <div class="mt-5 faq-cta-box rounded p-4 text-center">
+        <h2 class="h3 fw-bold mb-2">Noch Fragen?</h2>
+        <p class="text-muted mb-3">Wir helfen dir gerne weiter!</p>
+        <p class="small mb-0">
+          E-Mail:
+          <a href="mailto:info@gruenwohnen.de" class="faq-link">
+            info@gruenwohnen.de
+          </a>
+          <br />
+          Telefon:
+          <a href="tel:+493012345678" class="faq-link"> +49 30 1234 5678 </a>
+        </p>
+      </div>
+    </main>
 
     <footer class="border-top border-dark-subtle mt-5">
       <div class="container py-5">
