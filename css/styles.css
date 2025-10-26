@@ -370,3 +370,109 @@ nav {
 .faq-link:hover {
   text-decoration: underline;
 }
+
+/**** Standorte Page ****/
+.standorte-intro {
+  max-width: 48rem;
+}
+
+/* Location Cards */
+.location-card {
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.location-image {
+  height: 16rem;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .location-image {
+    height: 100%;
+    min-height: 24rem;
+  }
+}
+
+/* Apartments Badge */
+.apartments-badge {
+  background-color: transparent !important;
+  border: 1px solid var(--border) !important;
+  color: var(--body) !important;
+  padding: 0.375rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  white-space: nowrap;
+}
+
+/* Transport List */
+.transport-list {
+  list-style: none;
+  padding-left: 1.75rem;
+  margin-bottom: 0;
+}
+
+.transport-list li {
+  margin-bottom: 0.25rem;
+}
+
+.transport-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* CO2 Box */
+.co2-box {
+  background-color: var(--primary-10);
+}
+
+.co2-box .text-primary {
+  color: var(--primary) !important;
+}
+
+/* Feature Badge */
+.feature-badge {
+  background-color: var(--border) !important;
+  color: var(--body) !important;
+  border: none !important;
+  padding: 0.375rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 28px !important;
+}
+
+/* Info Box */
+.info-box {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+@media (prefers-color-scheme: dark) {
+  .info-box {
+    background-color: rgba(255, 255, 255, 0.02);
+  }
+}
+
+/* Icon Styles */
+.ri-map-pin-line,
+.ri-building-line,
+.ri-train-line,
+.ri-leaf-line,
+.ri-bike-line {
+  flex-shrink: 0;
+}
+
+/* Location Info Sections */
+.location-info h3 {
+  font-size: 1rem;
+}
+
+.location-info h3 i {
+  font-size: 1.25rem;
+}
+
+.icon {
+  color: var(--primary);
+}
