@@ -1,8 +1,47 @@
+/* =============================================================================
+   Table of Contents:
+   1. Configuration
+      1.1 Custom Fonts
+      1.2 Color System (OKLCH)
+      1.3 Theme Switching
+   2. Base Styles
+      2.1 Global Settings
+      2.2 Layout
+   3. Components
+      3.1 Navigation
+      3.2 Buttons
+      3.3 Cards
+      3.4 Forms
+      3.5 Footer
+      3.6 Badges
+   4. Utilities
+      4.1 Glassmorphism
+      4.2 Icons
+      4.3 Animations
+   5. Page-Specific Styles
+      5.1 Index Page
+      5.2 Apartments Page
+      5.3 Standorte Page
+      5.4 Nachhaltigkeit Page
+      5.5 Team Page
+      5.6 FAQ Page
+      5.7 Kontakt Page
+      5.8 Bewerben Page
+============================================================================= */
+
+/* =============================================================================
+   1. CONFIGURATION
+============================================================================= */
+
+/* 1.1 Custom Fonts
+   -------------------------------------------------------------------------- */
+
 @font-face {
   font-family: "Geist";
   src: url("./fonts/Geist.woff2") format("woff2");
   font-weight: 100 900;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -10,21 +49,26 @@
   src: url("./fonts/Geist-Italic.woff2") format("woff2");
   font-weight: 100 900;
   font-style: italic;
+  font-display: swap;
 }
 
-* {
-  font-family: "Geist", sans-serif !important;
-}
+/* 1.2 Color System (OKLCH)
+   -------------------------------------------------------------------------- */
 
 @media (prefers-color-scheme: light) {
   :root {
-    --body: oklch(0.2621 0.0095 248.19);
+    /* Primary Colors */
     --primary: oklch(0.4598 0.1116 152.04) !important;
     --primary-75: oklch(from var(--primary) l c h / 0.75);
     --primary-50: oklch(from var(--primary) l c h / 0.5);
     --primary-25: oklch(from var(--primary) l c h / 0.25);
     --primary-10: oklch(from var(--primary) l c h / 0.1);
+
+    /* Neutral Colors */
+    --body: oklch(0.2621 0.0095 248.19);
     --border: oklch(0.9335 0.0143 128.63) !important;
+
+    /* Accent Colors */
     --accent: oklch(0.6824 0.1503 54.97) !important;
   }
 
@@ -39,13 +83,18 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --body: oklch(0.9109 0.007 247.9);
+    /* Primary Colors */
     --primary: oklch(0.5978 0.1184 155.32) !important;
     --primary-75: oklch(from var(--primary) l c h / 0.75);
     --primary-50: oklch(from var(--primary) l c h / 0.5);
     --primary-25: oklch(from var(--primary) l c h / 0.25);
     --primary-10: oklch(from var(--primary) l c h / 0.1);
+
+    /* Neutral Colors */
+    --body: oklch(0.9109 0.007 247.9);
     --border: oklch(0.3219 0.0205 139.43) !important;
+
+    /* Accent Colors */
     --accent: oklch(0.6824 0.1503 54.97) !important;
   }
 
@@ -58,18 +107,41 @@
   }
 }
 
+/* =============================================================================
+   2. BASE STYLES
+============================================================================= */
+
+/* 2.1 Global Settings
+   -------------------------------------------------------------------------- */
+
+* {
+  font-family: "Geist", sans-serif !important;
+}
+
+/* 2.2 Layout
+   -------------------------------------------------------------------------- */
+
 nav {
   position: sticky !important;
   top: 0.5rem !important;
   z-index: 9999;
 }
 
-/* Bootstrap Overrides */
+/* =============================================================================
+   3. COMPONENTS
+============================================================================= */
+
+/* 3.1 Navigation
+   -------------------------------------------------------------------------- */
 
 .navbar-toggler {
   border-radius: 28px !important;
 }
 
+/* 3.2 Buttons
+   -------------------------------------------------------------------------- */
+
+/* Primary Button */
 .btn-primary {
   border-radius: 28px !important;
   background-color: var(--primary) !important;
@@ -82,6 +154,7 @@ nav {
   transition: all 0.3s ease;
 }
 
+/* Secondary Button */
 .btn-secondary {
   border-radius: 28px !important;
   background-color: var(--border) !important;
@@ -94,6 +167,9 @@ nav {
   transition: all 0.3s ease;
 }
 
+/* 3.3 Cards
+   -------------------------------------------------------------------------- */
+
 .card {
   transition: transform 0.2s ease;
   border-radius: 12px !important;
@@ -103,7 +179,114 @@ nav {
   transform: translateY(-4px);
 }
 
-/**** GLASS ****/
+/* 3.4 Forms
+   -------------------------------------------------------------------------- */
+
+.form-control,
+.form-select {
+  border-radius: 8px !important;
+  border-color: var(--border) !important;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--primary) !important;
+  box-shadow: 0 0 0 0.25rem var(--primary-25) !important;
+}
+
+.form-label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.form-check-input:checked {
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
+}
+
+.form-check-input:focus {
+  border-color: var(--primary) !important;
+  box-shadow: 0 0 0 0.25rem var(--primary-25) !important;
+}
+
+.card-header {
+  border-radius: 12px 12px 0 0 !important;
+}
+
+/* 3.5 Footer
+   -------------------------------------------------------------------------- */
+
+.footer-logo {
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer-tagline {
+  opacity: 0.8;
+}
+
+.footer-link:hover,
+.social-link:hover {
+  color: var(--primary) !important;
+  transition: color 0.2s ease;
+}
+
+/* 3.6 Badges
+   -------------------------------------------------------------------------- */
+
+/* Custom Badge */
+.custom-badge {
+  background-color: var(--primary-25);
+  color: var(--primary);
+  border: 1px solid var(--primary-50);
+  padding: 0.375rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 28px !important;
+}
+
+/* Sustainability Badge */
+.sustainability-badge {
+  background-color: var(--primary-25) !important;
+  color: var(--primary) !important;
+  border: 1px solid var(--primary-50) !important;
+  padding: 0.375rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 28px !important;
+}
+
+/* Feature Badge */
+.feature-badge {
+  background-color: var(--border) !important;
+  color: var(--body) !important;
+  border: none !important;
+  padding: 0.375rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 28px !important;
+}
+
+/* Apartments Badge */
+.apartments-badge {
+  background-color: transparent !important;
+  border: 1px solid var(--border) !important;
+  color: var(--body) !important;
+  padding: 0.375rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  white-space: nowrap;
+}
+
+/* =============================================================================
+   4. UTILITIES
+============================================================================= */
+
+/* 4.1 Glassmorphism
+   -------------------------------------------------------------------------- */
 
 .glass {
   background: rgba(255, 255, 255, 0.1);
@@ -128,18 +311,39 @@ nav {
   }
 }
 
-/**** INDEX ****/
+/* 4.2 Icons
+   -------------------------------------------------------------------------- */
 
-/* Custom Badge */
-.custom-badge {
-  background-color: var(--primary-25);
+.icon,
+.icon-small,
+.icon-large {
   color: var(--primary);
-  border: 1px solid var(--primary-50);
-  padding: 0.375rem 0.75rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  border-radius: 28px !important;
+  flex-shrink: 0;
 }
+
+.icon-box {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 0.5rem;
+  background-color: var(--primary-10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 4.3 Animations
+   -------------------------------------------------------------------------- */
+
+.transition {
+  transition: all 0.3s ease;
+}
+
+/* =============================================================================
+   5. PAGE-SPECIFIC STYLES
+============================================================================= */
+
+/* 5.1 Index Page
+   -------------------------------------------------------------------------- */
 
 /* Hero Section */
 .hero-section {
@@ -220,24 +424,185 @@ nav {
   opacity: 0.9;
 }
 
-/**** Contact Page ****/
-.contact-icon-wrapper {
-  width: 2.5rem;
-  height: 2.5rem;
+/* 5.2 Apartments Page
+   -------------------------------------------------------------------------- */
+
+.apartment-card {
+  transition: all 0.3s ease;
+}
+
+.apartment-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.apartment-image-wrapper {
+  height: 12rem;
+  overflow: hidden;
+}
+
+.apartment-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.apartment-card:hover .apartment-image {
+  transform: scale(1.05);
+}
+
+.apartment-badge {
+  top: 1rem;
+  right: 1rem;
+  background-color: var(--primary) !important;
+  color: white;
+  padding: 0.375rem 0.75rem;
+  border-radius: 28px !important;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.apartment-co2 {
+  color: var(--primary);
+}
+
+.apartment-details svg {
+  flex-shrink: 0;
+}
+
+/* 5.3 Standorte Page
+   -------------------------------------------------------------------------- */
+
+.location-card {
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.location-image {
+  height: 16rem;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .location-image {
+    height: 100%;
+    min-height: 24rem;
+  }
+}
+
+.transport-list {
+  list-style: none;
+  padding-left: 1.75rem;
+  margin-bottom: 0;
+}
+
+.transport-list li {
+  margin-bottom: 0.25rem;
+}
+
+.transport-list li:last-child {
+  margin-bottom: 0;
+}
+
+.co2-box {
+  background-color: var(--primary-10);
+}
+
+.co2-box .text-primary {
+  color: var(--primary) !important;
+}
+
+.info-box {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+@media (prefers-color-scheme: dark) {
+  .info-box {
+    background-color: rgba(255, 255, 255, 0.02);
+  }
+}
+
+/* 5.4 Nachhaltigkeit Page
+   -------------------------------------------------------------------------- */
+
+.sustainability-intro {
+  max-width: 48rem;
+}
+
+/* Hero Stats Cards */
+.stat-card-primary {
+  background-color: var(--primary) !important;
+  border: none;
+}
+
+.stat-card-accent {
+  background-color: var(--accent) !important;
+  border: none;
+}
+
+/* Stat Box */
+.stat-box {
+  background-color: rgba(0, 0, 0, 0.03);
+  border-radius: 0.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  .stat-box {
+    background-color: rgba(255, 255, 255, 0.03);
+  }
+}
+
+.stat-box .text-primary {
+  color: var(--primary) !important;
+}
+
+/* Green Image */
+.green-image {
+  position: relative;
+  height: 16rem;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+/* Certification Section */
+.certification-section {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+@media (prefers-color-scheme: dark) {
+  .certification-section {
+    background-color: rgba(255, 255, 255, 0.02);
+  }
+}
+
+.cert-icon {
+  height: 4rem;
+  width: 4rem;
   border-radius: 50%;
   background-color: var(--primary-10);
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.cert-icon .icon-large {
   color: var(--primary);
 }
 
-.contact-link:hover {
-  color: var(--primary) !important;
-  transition: color 0.2s ease;
+/* Sections Spacing */
+.sections-wrapper section {
+  margin-bottom: 4rem;
 }
 
-/**** Team Page ****/
+.sections-wrapper section:last-child {
+  margin-bottom: 0;
+}
+
+/* 5.5 Team Page
+   -------------------------------------------------------------------------- */
+
 .team-image-wrapper {
   position: relative;
   height: 16rem;
@@ -271,39 +636,9 @@ nav {
   opacity: 0.8;
 }
 
-/**** Bewerben Page ****/
-.form-control,
-.form-select {
-  border-radius: 8px !important;
-  border-color: var(--border) !important;
-}
+/* 5.6 FAQ Page
+   -------------------------------------------------------------------------- */
 
-.form-control:focus,
-.form-select:focus {
-  border-color: var(--primary) !important;
-  box-shadow: 0 0 0 0.25rem var(--primary-25) !important;
-}
-
-.form-label {
-  font-weight: 500;
-  margin-bottom: 0.5rem;
-}
-
-.form-check-input:checked {
-  background-color: var(--primary) !important;
-  border-color: var(--primary) !important;
-}
-
-.form-check-input:focus {
-  border-color: var(--primary) !important;
-  box-shadow: 0 0 0 0.25rem var(--primary-25) !important;
-}
-
-.card-header {
-  border-radius: 12px 12px 0 0 !important;
-}
-
-/**** FAQ Page ****/
 .accordion-flush .faq-item {
   border: 1px solid var(--border) !important;
   border-radius: 28px !important;
@@ -366,252 +701,30 @@ nav {
   text-decoration: underline;
 }
 
-/**** Nachhaltigkeit Page ****/
-.sustainability-intro {
-  max-width: 48rem;
-}
+/* 5.7 Kontakt Page
+   -------------------------------------------------------------------------- */
 
-/* Hero Stats Cards */
-.stat-card-primary {
-  background-color: var(--primary) !important;
-  border: none;
-}
-
-.stat-card-accent {
-  background-color: var(--accent) !important;
-  border: none;
-}
-
-/* Section Icon Box */
-.icon-box {
-  height: 3rem;
-  width: 3rem;
-  border-radius: 0.5rem;
-  background-color: var(--primary-10);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.icon-box .icon {
-  color: var(--primary);
-}
-
-/* Icons */
-.icon-large {
-  color: var(--primary);
-}
-
-.icon-small {
-  color: var(--primary);
-}
-
-/* Badge */
-.sustainability-badge {
-  background-color: var(--primary-25) !important;
-  color: var(--primary) !important;
-  border: 1px solid var(--primary-50) !important;
-  padding: 0.375rem 0.75rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  border-radius: 28px !important;
-}
-
-/* Stat Box */
-.stat-box {
-  background-color: rgba(0, 0, 0, 0.03);
-  border-radius: 0.5rem;
-}
-
-@media (prefers-color-scheme: dark) {
-  .stat-box {
-    background-color: rgba(255, 255, 255, 0.03);
-  }
-}
-
-.stat-box .text-primary {
-  color: var(--primary) !important;
-}
-
-/* Green Image */
-.green-image {
-  position: relative;
-  height: 16rem;
-  overflow: hidden;
-  border-radius: 0.5rem;
-}
-
-/* Certification Section */
-.certification-section {
-/**** Apartments Page ****/
-.apartment-card {
-  transition: all 0.3s ease;
-}
-
-.apartment-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-.apartment-image-wrapper {
-  height: 12rem;
-  overflow: hidden;
-}
-
-.apartment-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.apartment-card:hover .apartment-image {
-  transform: scale(1.05);
-}
-
-.apartment-badge {
-  top: 1rem;
-  right: 1rem;
-  background-color: var(--primary) !important;
-  color: white;
-  padding: 0.375rem 0.75rem;
-  border-radius: 28px !important;
-  font-size: 0.875rem;
-  font-weight: 500;
-}
-
-.apartment-co2 {
-  color: var(--primary);
-}
-
-.apartment-details svg {
-  flex-shrink: 0;
-}
-
-/**** Standorte Page ****/
-
-/* Location Cards */
-.location-card {
-  overflow: hidden;
-  border: 1px solid var(--border);
-}
-
-.location-image {
-  height: 16rem;
-  position: relative;
-  overflow: hidden;
-}
-
-@media (min-width: 768px) {
-  .location-image {
-    height: 100%;
-    min-height: 24rem;
-  }
-}
-
-/* Apartments Badge */
-.apartments-badge {
-  background-color: transparent !important;
-  border: 1px solid var(--border) !important;
-  color: var(--body) !important;
-  padding: 0.375rem 0.75rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.25rem;
-  white-space: nowrap;
-}
-
-/* Transport List */
-.transport-list {
-  list-style: none;
-  padding-left: 1.75rem;
-  margin-bottom: 0;
-}
-
-.transport-list li {
-  margin-bottom: 0.25rem;
-}
-
-.transport-list li:last-child {
-  margin-bottom: 0;
-}
-
-/* CO2 Box */
-.co2-box {
-  background-color: var(--primary-10);
-}
-
-.co2-box .text-primary {
-  color: var(--primary) !important;
-}
-
-/* Feature Badge */
-.feature-badge {
-  background-color: var(--border) !important;
-  color: var(--body) !important;
-  border: none !important;
-  padding: 0.375rem 0.75rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  border-radius: 28px !important;
-}
-
-/* Info Box */
-.info-box {
-  background-color: rgba(0, 0, 0, 0.02);
-}
-
-@media (prefers-color-scheme: dark) {
-  .certification-section {
-    background-color: rgba(255, 255, 255, 0.02);
-  }
-  
-  .info-box {
-    background-color: rgba(255, 255, 255, 0.02);
-  }
-}
-
-.cert-icon {
-  height: 4rem;
-  width: 4rem;
+.contact-icon-wrapper {
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
   background-color: var(--primary-10);
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.cert-icon .icon-large {
   color: var(--primary);
 }
 
-/* Sections Spacing */
-.sections-wrapper section {
-  margin-bottom: 4rem;
+.contact-link:hover {
+  color: var(--primary) !important;
+  transition: color 0.2s ease;
 }
 
-.sections-wrapper section:last-child {
-  margin-bottom: 0;
-/* Icon Styles */
-.ri-map-pin-line,
-.ri-building-line,
-.ri-train-line,
-.ri-leaf-line,
-.ri-bike-line {
-  flex-shrink: 0;
-}
+/* 5.8 Bewerben Page
+   -------------------------------------------------------------------------- */
 
-/* Location Info Sections */
-.location-info h3 {
-  font-size: 1rem;
-}
+/* Specific form styles already covered in section 3.4 Forms */
 
-.location-info h3 i {
-  font-size: 1.25rem;
-}
-
-.icon {
-  color: var(--primary);
-}
+/* =============================================================================
+   END OF STYLESHEET
+============================================================================= */
