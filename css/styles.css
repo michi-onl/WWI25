@@ -366,6 +366,83 @@ nav {
   text-decoration: underline;
 }
 
+/**** Nachhaltigkeit Page ****/
+.sustainability-intro {
+  max-width: 48rem;
+}
+
+/* Hero Stats Cards */
+.stat-card-primary {
+  background-color: var(--primary) !important;
+  border: none;
+}
+
+.stat-card-accent {
+  background-color: var(--accent) !important;
+  border: none;
+}
+
+/* Section Icon Box */
+.icon-box {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 0.5rem;
+  background-color: var(--primary-10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-box .icon {
+  color: var(--primary);
+}
+
+/* Icons */
+.icon-large {
+  color: var(--primary);
+}
+
+.icon-small {
+  color: var(--primary);
+}
+
+/* Badge */
+.sustainability-badge {
+  background-color: var(--primary-25) !important;
+  color: var(--primary) !important;
+  border: 1px solid var(--primary-50) !important;
+  padding: 0.375rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 28px !important;
+}
+
+/* Stat Box */
+.stat-box {
+  background-color: rgba(0, 0, 0, 0.03);
+  border-radius: 0.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  .stat-box {
+    background-color: rgba(255, 255, 255, 0.03);
+  }
+}
+
+.stat-box .text-primary {
+  color: var(--primary) !important;
+}
+
+/* Green Image */
+.green-image {
+  position: relative;
+  height: 16rem;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+/* Certification Section */
+.certification-section {
 /**** Apartments Page ****/
 .apartment-card {
   transition: all 0.3s ease;
@@ -487,11 +564,36 @@ nav {
 }
 
 @media (prefers-color-scheme: dark) {
+  .certification-section {
+    background-color: rgba(255, 255, 255, 0.02);
+  }
+  
   .info-box {
     background-color: rgba(255, 255, 255, 0.02);
   }
 }
 
+.cert-icon {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  background-color: var(--primary-10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cert-icon .icon-large {
+  color: var(--primary);
+}
+
+/* Sections Spacing */
+.sections-wrapper section {
+  margin-bottom: 4rem;
+}
+
+.sections-wrapper section:last-child {
+  margin-bottom: 0;
 /* Icon Styles */
 .ri-map-pin-line,
 .ri-building-line,
