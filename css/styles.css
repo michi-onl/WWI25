@@ -236,9 +236,8 @@ nav {
 
 /* Custom Badge */
 .custom-badge {
-  background-color: var(--primary-25);
-  color: var(--primary);
-  border: 1px solid var(--primary-50);
+  background-color: var(--primary-50);
+  border: 1px solid var(--primary-75);
   padding: 0.375rem 0.75rem;
   font-size: 0.875rem;
   font-weight: 500;
@@ -561,7 +560,7 @@ nav {
 /* Green Image */
 .green-image {
   position: relative;
-  height: 16rem;
+  height: 18rem;
   overflow: hidden;
   border-radius: 0.5rem;
 }

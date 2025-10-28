@@ -59,32 +59,28 @@
          NAVIGATION
          ============================================================ -->
     <nav class="navbar navbar-expand-lg glass mx-2">
-      <div class="container-fluid d-flex flex-wrap">
+      <div class="container-fluid">
         <!-- Logo -->
-        <a
-          href="/"
-          class="d-flex align-items-center mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
-        >
+        <a href="/" class="navbar-brand d-flex align-items-center">
           <img
-            class="bi mx-lg-2 mx-1"
+            class="me-lg-2"
             src="assets/icons/sprout.svg"
             alt="GrünWohnen Logo"
+            width="32"
+            height="32"
           />
-          <span class="d-lg-none d-block fs-5">
-            <strong>GrünWohnen</strong>
-          </span>
-          <span class="d-none d-lg-block fs-4">
+          <span class="fs-5 fs-lg-4">
             <strong>GrünWohnen</strong>
           </span>
         </a>
 
         <!-- Mobile Actions -->
         <div class="d-lg-none d-flex">
-          <ul class="nav nav-pills mx-1 mx-sm-2">
+          <ul class="nav nav-pills ms-1 ms-lg-2 me-2">
             <li class="nav-item">
               <a
-                href="#"
-                class="d-none d-sm-flex nav-link e-2 text-muted disabled"
+                href="/login.html"
+                class="d-none d-sm-flex nav-link text-muted"
                 aria-disabled="true"
               >
                 Anmelden
@@ -93,13 +89,14 @@
             <li class="nav-item">
               <a
                 href="/bewerben.html"
-                class="nav-link active btn-primary"
+                class="btn btn-primary"
                 aria-current="page"
               >
                 Bewerben
               </a>
             </li>
           </ul>
+
           <button
             class="navbar-toggler"
             type="button"
@@ -114,89 +111,92 @@
         </div>
 
         <!-- Navigation Links -->
-        <div class="collapse navbar-collapse ms-2" id="navbarNav">
-          <ul class="navbar-nav ms-lg-auto">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
             <li class="nav-item">
               <a href="/" class="nav-link text-muted" aria-current="page">
-                <i class="ri-home-fill me-1 d-lg-none"></i>
+                <i class="ri-home-fill me-2 d-lg-none"></i>
                 Start
               </a>
             </li>
             <li class="nav-item">
               <a href="/apartments.html" class="nav-link text-muted">
-                <i class="ri-gallery-view me-1 d-lg-none"></i>
+                <i class="ri-gallery-view me-2 d-lg-none"></i>
                 Apartments
               </a>
             </li>
             <li class="nav-item">
               <a href="/standorte.html" class="nav-link text-muted">
-                <i class="ri-map-pin-fill me-1 d-lg-none"></i>
+                <i class="ri-map-pin-fill me-2 d-lg-none"></i>
                 Standorte
               </a>
             </li>
             <li class="nav-item">
               <a href="/nachhaltigkeit.html" class="nav-link text-muted">
-                <i class="ri-tree-fill me-1 d-lg-none"></i>
+                <i class="ri-tree-fill me-2 d-lg-none"></i>
                 Nachhaltigkeit
               </a>
             </li>
             <li class="nav-item">
               <a href="/team.html" class="nav-link text-muted">
-                <i class="ri-group-fill me-1 d-lg-none"></i>
+                <i class="ri-group-fill me-2 d-lg-none"></i>
                 Team
               </a>
             </li>
             <li class="nav-item">
               <a href="/faq.html" class="nav-link text-muted">
-                <i class="ri-question-fill me-1 d-lg-none"></i>
+                <i class="ri-question-fill me-2 d-lg-none"></i>
                 FAQ
               </a>
             </li>
             <li class="nav-item">
               <a href="/kontakt.html" class="nav-link text-muted">
-                <i class="ri-contacts-fill me-1 d-lg-none"></i>
+                <i class="ri-contacts-fill me-2 d-lg-none"></i>
                 Kontakt
               </a>
             </li>
-            <li class="nav-item d-sm-none mt-1">
+            <!-- Mobile-only Anmelden Link -->
+            <li class="nav-item d-sm-none">
               <a
-                href="#"
-                class="nav-link text-muted disabled"
+                href="/login.html"
+                class="nav-link text-muted"
                 aria-disabled="true"
+                tabindex="-1"
               >
-                <i class="ri-login-box-line me-1"></i>
+                <i class="ri-login-box-line me-2"></i>
                 Anmelden
               </a>
             </li>
+          </ul>
 
-            <!-- Desktop Actions -->
-            <ul class="d-none d-lg-flex nav nav-pills ms-3">
-              <li class="nav-item">
-                <a
-                  href="#"
-                  class="nav-link me-2 text-muted disabled"
-                  aria-disabled="true"
-                >
-                  Anmelden
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/bewerben.html"
-                  class="nav-link active btn-primary text-light"
-                  aria-current="page"
-                >
-                  Bewerben
-                </a>
-              </li>
-            </ul>
+          <!-- Desktop Action Buttons -->
+          <ul class="navbar-nav d-none d-lg-flex">
+            <li class="nav-item">
+              <a
+                href="/login.html"
+                class="nav-link text-muted"
+                aria-disabled="true"
+                tabindex="-1"
+              >
+                Anmelden
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                href="/bewerben.html"
+                class="btn btn-primary ms-2"
+                aria-current="page"
+              >
+                Bewerben
+              </a>
+            </li>
           </ul>
         </div>
       </div>
     </nav>
 
     <!-- ============================================================
-         MAIN CONTENT - CUSTOMIZE PER PAGE
+         MAIN CONTENT
          ============================================================ -->
     <main class="container py-5">
       <div class="px-4">
@@ -213,13 +213,13 @@
             <div class="card border overflow-hidden">
               <div class="team-image-wrapper">
                 <img
-                  src="/portrait-m-gerstmeier.png"
-                  alt="Portrait von Magnus Gerstmeier"
+                  src="/portrait-magnus-g.png"
+                  alt="Portrait von Magnus G."
                   class="team-image"
                 />
               </div>
               <div class="card-body pt-4">
-                <h3 class="h5 fw-semibold mb-1">Magnus Gerstmeier</h3>
+                <h3 class="h5 fw-semibold mb-1">Magnus G.</h3>
                 <p class="small mb-3 team-role">Gründer & Geschäftsführer</p>
                 <p class="small text-muted mb-3 lh-base">
                   Magnus hat GrünWohnen 2019 gegründet mit der Vision,
@@ -233,7 +233,7 @@
                     <i class="ri-mail-line fs-4"></i>
                   </a>
                   <a
-                    href="#"
+                    href="https://linkedin.com"
                     class="text-muted text-decoration-none team-social-link"
                   >
                     <i class="ri-linkedin-box-line fs-4"></i>
@@ -248,17 +248,17 @@
             <div class="card border overflow-hidden">
               <div class="team-image-wrapper">
                 <img
-                  src="/portrait-l-schirle.png"
-                  alt="Portrait von Louis Schirle"
+                  src="/portrait-louis-s.png"
+                  alt="Portrait von Louis S."
                   class="team-image"
                 />
               </div>
               <div class="card-body pt-4">
-                <h3 class="h5 fw-semibold mb-1">Louis Schirle</h3>
+                <h3 class="h5 fw-semibold mb-1">Louis S.</h3>
                 <p class="small mb-3 team-role">Head of Sustainability</p>
                 <p class="small text-muted mb-3 lh-base">
                   Louis ist Umweltingenieur und verantwortlich für alle
-                  Nachhaltigkeitsmaßnahmen und CO₂-Berechnungen.
+                  Nachhaltigkeitsmaßnahmen und CO<sub>2</sub>-Berechnungen.
                 </p>
                 <div class="d-flex gap-3">
                   <a
@@ -268,7 +268,7 @@
                     <i class="ri-mail-line fs-4"></i>
                   </a>
                   <a
-                    href="#"
+                    href="https://linkedin.com"
                     class="text-muted text-decoration-none team-social-link"
                   >
                     <i class="ri-linkedin-box-line fs-4"></i>
@@ -283,13 +283,13 @@
             <div class="card border overflow-hidden">
               <div class="team-image-wrapper">
                 <img
-                  src="/portrait-m-wagner.jpg"
-                  alt="Portrait von Michael Wagner"
+                  src="/portrait-michael-w.jpg"
+                  alt="Portrait von Michael W."
                   class="team-image"
                 />
               </div>
               <div class="card-body pt-4">
-                <h3 class="h5 fw-semibold mb-1">Michael Wagner</h3>
+                <h3 class="h5 fw-semibold mb-1">Michael W.</h3>
                 <p class="small mb-3 team-role">Community Manager</p>
                 <p class="small text-muted mb-3 lh-base">
                   Michael kümmert sich um unsere Bewohner*innen und organisiert
@@ -303,7 +303,7 @@
                     <i class="ri-mail-line fs-4"></i>
                   </a>
                   <a
-                    href="#"
+                    href="https://linkedin.com"
                     class="text-muted text-decoration-none team-social-link"
                   >
                     <i class="ri-linkedin-box-line fs-4"></i>
@@ -318,13 +318,13 @@
             <div class="card border overflow-hidden">
               <div class="team-image-wrapper">
                 <img
-                  src="/portrait-f-kühn.jpg"
-                  alt="Portrait von Florian Kühn"
+                  src="/portrait-florian-k.jpg"
+                  alt="Portrait von Florian K."
                   class="team-image"
                 />
               </div>
               <div class="card-body pt-4">
-                <h3 class="h5 fw-semibold mb-1">Florian Kühn</h3>
+                <h3 class="h5 fw-semibold mb-1">Florian K.</h3>
                 <p class="small mb-3 team-role">Facility Manager</p>
                 <p class="small text-muted mb-3 lh-base">
                   Florian sorgt dafür, dass alle Gebäude optimal funktionieren
@@ -338,7 +338,7 @@
                     <i class="ri-mail-line fs-4"></i>
                   </a>
                   <a
-                    href="#"
+                    href="https://linkedin.com"
                     class="text-muted text-decoration-none team-social-link"
                   >
                     <i class="ri-linkedin-box-line fs-4"></i>
@@ -467,21 +467,24 @@
               <li>
                 <div class="d-flex gap-3 pt-2">
                   <a
-                    href="#"
+                    href="https://instagram.com"
+                    target="_blank"
                     aria-label="Instagram"
                     class="text-muted fs-5 social-link"
                   >
                     <i class="ri-instagram-line"></i>
                   </a>
                   <a
-                    href="#"
+                    href="https://facebook.com"
+                    target="_blank"
                     aria-label="Facebook"
                     class="text-muted fs-5 social-link"
                   >
                     <i class="ri-facebook-line"></i>
                   </a>
                   <a
-                    href="#"
+                    href="https://linkedin.com"
+                    target="_blank"
                     aria-label="LinkedIn"
                     class="text-muted fs-5 social-link"
                   >

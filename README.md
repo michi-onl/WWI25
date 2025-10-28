@@ -27,7 +27,7 @@ GrünWohnen ist eine statische Website für nachhaltige Studentenwohnungen in Aa
 **Hauptfunktionen:**
 
 - Apartment-Übersicht mit Filteroptionen
-- Standort-Informationen mit ÖPNV-Anbindung und CO₂-Bilanz
+- Standort-Informationen mit ÖPNV-Anbindung und CO<sub>2</sub>-Bilanz
 - Bewerbungsformular für Apartments
 - FAQ-Bereich mit Accordion-Navigation
 - Team- und Kontaktseiten

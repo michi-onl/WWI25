@@ -59,32 +59,28 @@
          NAVIGATION
          ============================================================ -->
     <nav class="navbar navbar-expand-lg glass mx-2">
-      <div class="container-fluid d-flex flex-wrap">
+      <div class="container-fluid">
         <!-- Logo -->
-        <a
-          href="/"
-          class="d-flex align-items-center mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
-        >
+        <a href="/" class="navbar-brand d-flex align-items-center">
           <img
-            class="bi mx-lg-2 mx-1"
+            class="me-lg-2"
             src="assets/icons/sprout.svg"
             alt="GrünWohnen Logo"
+            width="32"
+            height="32"
           />
-          <span class="d-lg-none d-block fs-5">
-            <strong>GrünWohnen</strong>
-          </span>
-          <span class="d-none d-lg-block fs-4">
+          <span class="fs-5 fs-lg-4">
             <strong>GrünWohnen</strong>
           </span>
         </a>
 
         <!-- Mobile Actions -->
         <div class="d-lg-none d-flex">
-          <ul class="nav nav-pills mx-1 mx-sm-2">
+          <ul class="nav nav-pills ms-1 ms-lg-2 me-2">
             <li class="nav-item">
               <a
-                href="#"
-                class="d-none d-sm-flex nav-link e-2 text-muted disabled"
+                href="/login.html"
+                class="d-none d-sm-flex nav-link text-muted"
                 aria-disabled="true"
               >
                 Anmelden
@@ -93,13 +89,14 @@
             <li class="nav-item">
               <a
                 href="/bewerben.html"
-                class="nav-link active btn-primary"
+                class="btn btn-primary"
                 aria-current="page"
               >
                 Bewerben
               </a>
             </li>
           </ul>
+
           <button
             class="navbar-toggler"
             type="button"
@@ -114,89 +111,92 @@
         </div>
 
         <!-- Navigation Links -->
-        <div class="collapse navbar-collapse ms-2" id="navbarNav">
-          <ul class="navbar-nav ms-lg-auto">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
             <li class="nav-item">
               <a href="/" class="nav-link text-muted" aria-current="page">
-                <i class="ri-home-fill me-1 d-lg-none"></i>
+                <i class="ri-home-fill me-2 d-lg-none"></i>
                 Start
               </a>
             </li>
             <li class="nav-item">
               <a href="/apartments.html" class="nav-link text-muted">
-                <i class="ri-gallery-view me-1 d-lg-none"></i>
+                <i class="ri-gallery-view me-2 d-lg-none"></i>
                 Apartments
               </a>
             </li>
             <li class="nav-item">
               <a href="/standorte.html" class="nav-link text-muted">
-                <i class="ri-map-pin-fill me-1 d-lg-none"></i>
+                <i class="ri-map-pin-fill me-2 d-lg-none"></i>
                 Standorte
               </a>
             </li>
             <li class="nav-item">
               <a href="/nachhaltigkeit.html" class="nav-link text-muted">
-                <i class="ri-tree-fill me-1 d-lg-none"></i>
+                <i class="ri-tree-fill me-2 d-lg-none"></i>
                 Nachhaltigkeit
               </a>
             </li>
             <li class="nav-item">
               <a href="/team.html" class="nav-link text-muted">
-                <i class="ri-group-fill me-1 d-lg-none"></i>
+                <i class="ri-group-fill me-2 d-lg-none"></i>
                 Team
               </a>
             </li>
             <li class="nav-item">
               <a href="/faq.html" class="nav-link text-muted">
-                <i class="ri-question-fill me-1 d-lg-none"></i>
+                <i class="ri-question-fill me-2 d-lg-none"></i>
                 FAQ
               </a>
             </li>
             <li class="nav-item">
               <a href="/kontakt.html" class="nav-link text-muted">
-                <i class="ri-contacts-fill me-1 d-lg-none"></i>
+                <i class="ri-contacts-fill me-2 d-lg-none"></i>
                 Kontakt
               </a>
             </li>
-            <li class="nav-item d-sm-none mt-1">
+            <!-- Mobile-only Anmelden Link -->
+            <li class="nav-item d-sm-none">
               <a
-                href="#"
-                class="nav-link text-muted disabled"
+                href="/login.html"
+                class="nav-link text-muted"
                 aria-disabled="true"
+                tabindex="-1"
               >
-                <i class="ri-login-box-line me-1"></i>
+                <i class="ri-login-box-line me-2"></i>
                 Anmelden
               </a>
             </li>
+          </ul>
 
-            <!-- Desktop Actions -->
-            <ul class="d-none d-lg-flex nav nav-pills ms-3">
-              <li class="nav-item">
-                <a
-                  href="#"
-                  class="nav-link me-2 text-muted disabled"
-                  aria-disabled="true"
-                >
-                  Anmelden
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/bewerben.html"
-                  class="nav-link active btn-primary text-light"
-                  aria-current="page"
-                >
-                  Bewerben
-                </a>
-              </li>
-            </ul>
+          <!-- Desktop Action Buttons -->
+          <ul class="navbar-nav d-none d-lg-flex">
+            <li class="nav-item">
+              <a
+                href="/login.html"
+                class="nav-link text-muted"
+                aria-disabled="true"
+                tabindex="-1"
+              >
+                Anmelden
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                href="/bewerben.html"
+                class="btn btn-primary ms-2"
+                aria-current="page"
+              >
+                Bewerben
+              </a>
+            </li>
           </ul>
         </div>
       </div>
     </nav>
 
     <!-- ============================================================
-         MAIN CONTENT - CUSTOMIZE PER PAGE
+         MAIN CONTENT
          ============================================================ -->
     <main class="container py-5">
       <!-- Header -->
@@ -390,7 +390,7 @@
             <div class="col-md-6">
               <div class="green-image">
                 <img
-                  src="/assets/images/dachgarten-mit-pflanzen-und-gemüse.webp"
+                  src="/assets/images/dachgarten-mit-pflanzen-und-gemuese.webp"
                   alt="Dachgarten"
                   class="w-100 h-100 object-fit-cover rounded-3"
                 />
@@ -509,7 +509,7 @@
               <div class="cert-icon mx-auto mb-3">
                 <i class="ri-plant-line icon-large fs-1"></i>
               </div>
-              <h3 class="fw-semibold mb-1">CO₂-neutral</h3>
+              <h3 class="fw-semibold mb-1">CO<sub>2</sub>-neutral</h3>
               <p class="text-muted small mb-0">Zertifiziert 2024</p>
             </div>
           </div>
@@ -612,21 +612,24 @@
               <li>
                 <div class="d-flex gap-3 pt-2">
                   <a
-                    href="#"
+                    href="https://instagram.com"
+                    target="_blank"
                     aria-label="Instagram"
                     class="text-muted fs-5 social-link"
                   >
                     <i class="ri-instagram-line"></i>
                   </a>
                   <a
-                    href="#"
+                    href="https://facebook.com"
+                    target="_blank"
                     aria-label="Facebook"
                     class="text-muted fs-5 social-link"
                   >
                     <i class="ri-facebook-line"></i>
                   </a>
                   <a
-                    href="#"
+                    href="https://linkedin.com"
+                    target="_blank"
                     aria-label="LinkedIn"
                     class="text-muted fs-5 social-link"
                   >

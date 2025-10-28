@@ -59,32 +59,28 @@
          NAVIGATION
          ============================================================ -->
     <nav class="navbar navbar-expand-lg glass mx-2">
-      <div class="container-fluid d-flex flex-wrap">
+      <div class="container-fluid">
         <!-- Logo -->
-        <a
-          href="/"
-          class="d-flex align-items-center mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
-        >
+        <a href="/" class="navbar-brand d-flex align-items-center">
           <img
-            class="bi mx-lg-2 mx-1"
+            class="me-lg-2"
             src="assets/icons/sprout.svg"
             alt="GrünWohnen Logo"
+            width="32"
+            height="32"
           />
-          <span class="d-lg-none d-block fs-5">
-            <strong>GrünWohnen</strong>
-          </span>
-          <span class="d-none d-lg-block fs-4">
+          <span class="fs-5 fs-lg-4">
             <strong>GrünWohnen</strong>
           </span>
         </a>
 
         <!-- Mobile Actions -->
         <div class="d-lg-none d-flex">
-          <ul class="nav nav-pills mx-1 mx-sm-2">
+          <ul class="nav nav-pills ms-1 ms-lg-2 me-2">
             <li class="nav-item">
               <a
-                href="#"
-                class="d-none d-sm-flex nav-link e-2 text-muted disabled"
+                href="/login.html"
+                class="d-none d-sm-flex nav-link text-muted"
                 aria-disabled="true"
               >
                 Anmelden
@@ -93,13 +89,14 @@
             <li class="nav-item">
               <a
                 href="/bewerben.html"
-                class="nav-link active btn-primary"
+                class="btn btn-primary"
                 aria-current="page"
               >
                 Bewerben
               </a>
             </li>
           </ul>
+
           <button
             class="navbar-toggler"
             type="button"
@@ -114,89 +111,92 @@
         </div>
 
         <!-- Navigation Links -->
-        <div class="collapse navbar-collapse ms-2" id="navbarNav">
-          <ul class="navbar-nav ms-lg-auto">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
             <li class="nav-item">
               <a href="/" class="nav-link text-muted" aria-current="page">
-                <i class="ri-home-fill me-1 d-lg-none"></i>
+                <i class="ri-home-fill me-2 d-lg-none"></i>
                 Start
               </a>
             </li>
             <li class="nav-item">
               <a href="/apartments.html" class="nav-link text-muted">
-                <i class="ri-gallery-view me-1 d-lg-none"></i>
+                <i class="ri-gallery-view me-2 d-lg-none"></i>
                 Apartments
               </a>
             </li>
             <li class="nav-item">
               <a href="/standorte.html" class="nav-link text-muted">
-                <i class="ri-map-pin-fill me-1 d-lg-none"></i>
+                <i class="ri-map-pin-fill me-2 d-lg-none"></i>
                 Standorte
               </a>
             </li>
             <li class="nav-item">
               <a href="/nachhaltigkeit.html" class="nav-link text-muted">
-                <i class="ri-tree-fill me-1 d-lg-none"></i>
+                <i class="ri-tree-fill me-2 d-lg-none"></i>
                 Nachhaltigkeit
               </a>
             </li>
             <li class="nav-item">
               <a href="/team.html" class="nav-link text-muted">
-                <i class="ri-group-fill me-1 d-lg-none"></i>
+                <i class="ri-group-fill me-2 d-lg-none"></i>
                 Team
               </a>
             </li>
             <li class="nav-item">
               <a href="/faq.html" class="nav-link text-muted">
-                <i class="ri-question-fill me-1 d-lg-none"></i>
+                <i class="ri-question-fill me-2 d-lg-none"></i>
                 FAQ
               </a>
             </li>
             <li class="nav-item">
               <a href="/kontakt.html" class="nav-link text-muted">
-                <i class="ri-contacts-fill me-1 d-lg-none"></i>
+                <i class="ri-contacts-fill me-2 d-lg-none"></i>
                 Kontakt
               </a>
             </li>
-            <li class="nav-item d-sm-none mt-1">
+            <!-- Mobile-only Anmelden Link -->
+            <li class="nav-item d-sm-none">
               <a
-                href="#"
-                class="nav-link text-muted disabled"
+                href="/login.html"
+                class="nav-link text-muted"
                 aria-disabled="true"
+                tabindex="-1"
               >
-                <i class="ri-login-box-line me-1"></i>
+                <i class="ri-login-box-line me-2"></i>
                 Anmelden
               </a>
             </li>
+          </ul>
 
-            <!-- Desktop Actions -->
-            <ul class="d-none d-lg-flex nav nav-pills ms-3">
-              <li class="nav-item">
-                <a
-                  href="#"
-                  class="nav-link me-2 text-muted disabled"
-                  aria-disabled="true"
-                >
-                  Anmelden
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/bewerben.html"
-                  class="nav-link active btn-primary text-light"
-                  aria-current="page"
-                >
-                  Bewerben
-                </a>
-              </li>
-            </ul>
+          <!-- Desktop Action Buttons -->
+          <ul class="navbar-nav d-none d-lg-flex">
+            <li class="nav-item">
+              <a
+                href="/login.html"
+                class="nav-link text-muted"
+                aria-disabled="true"
+                tabindex="-1"
+              >
+                Anmelden
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                href="/bewerben.html"
+                class="btn btn-primary ms-2"
+                aria-current="page"
+              >
+                Bewerben
+              </a>
+            </li>
           </ul>
         </div>
       </div>
     </nav>
 
     <!-- ============================================================
-         MAIN CONTENT - CUSTOMIZE PER PAGE
+         MAIN CONTENT
          ============================================================ -->
     <main class="py-5">
       <!-- Hero Section -->
@@ -206,7 +206,7 @@
             <div class="col-md-6">
               <a href="/nachhaltigkeit.html"
                 ><span class="badge custom-badge mb-3"
-                  >100% CO₂-neutral</span
+                  >100% CO<sub>2</sub>-neutral</span
                 ></a
               >
               <h1 class="display-4 fw-bold mb-4">
@@ -313,10 +313,13 @@
               </div>
             </div>
             <div class="col-md-6">
-              <h2 class="display-5 fw-bold mb-4">Unser CO₂-Fußabdruck</h2>
+              <h2 class="display-5 fw-bold mb-4">
+                Unser CO<sub>2</sub>-Fußabdruck
+              </h2>
               <p class="text-muted mb-4">
                 Transparenz ist uns wichtig. Jedes unserer Apartments zeigt die
-                genaue CO₂-Bilanz, damit du weißt, wie nachhaltig du wohnst.
+                genaue CO<sub>2</sub>-Bilanz, damit du weißt, wie nachhaltig du
+                wohnst.
               </p>
 
               <div class="impact-list">
@@ -478,21 +481,24 @@
               <li>
                 <div class="d-flex gap-3 pt-2">
                   <a
-                    href="#"
+                    href="https://instagram.com"
+                    target="_blank"
                     aria-label="Instagram"
                     class="text-muted fs-5 social-link"
                   >
                     <i class="ri-instagram-line"></i>
                   </a>
                   <a
-                    href="#"
+                    href="https://facebook.com"
+                    target="_blank"
                     aria-label="Facebook"
                     class="text-muted fs-5 social-link"
                   >
                     <i class="ri-facebook-line"></i>
                   </a>
                   <a
-                    href="#"
+                    href="https://linkedin.com"
+                    target="_blank"
                     aria-label="LinkedIn"
                     class="text-muted fs-5 social-link"
                   >
