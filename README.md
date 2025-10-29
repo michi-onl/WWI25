@@ -8,7 +8,7 @@
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3.8-7952B3?logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
 
-## 📋 Inhaltsverzeichnis
+## Inhaltsverzeichnis
 
 - [Über das Projekt](#über-das-projekt)
 - [Technologie-Stack](#technologie-stack)
@@ -32,16 +32,17 @@ GrünWohnen ist eine statische Website für nachhaltige Studentenwohnungen in Aa
 - FAQ-Bereich mit Accordion-Navigation
 - Team- und Kontaktseiten
 
-## 🛠 Technologie-Stack
+## Technologie-Stack
 
 - **HTML5**: Semantisches Markup
 - **CSS3**: Custom Properties, OKLCH-Farbraum, Media Queries
 - **JavaScript**: Minimal (nur für Theme-Detection)
 - **Bootstrap 5.3.8**: Grid-System und UI-Komponenten
+- **popper.js 2.9.2**: Pop-out engine verwendet von Bootstrap
 - **RemixIcon 4.1.0**: Icon-Set
 - **Custom Fonts**: Geist Font Family (Variable Font)
 
-## 🚀 Installation & Setup
+## Installation & Setup
 
 ### Voraussetzungen
 
@@ -95,7 +96,7 @@ WWI25/
 └── README.md               # Diese Datei
 ```
 
-## 🔧 Technische Entscheidungen
+## Technische Entscheidungen
 
 ### Warum OKLCH-Farbraum?
 
@@ -168,7 +169,7 @@ WWI25/
 - **Performance**: woff2-Format für optimale Kompression
 - **Kontrolle**: Konsistente Darstellung über alle Browser/Betriebssysteme
 
-## 💻 Code-Besonderheiten
+## Code-Besonderheiten
 
 ### Glassmorphism-Navigation
 
@@ -378,7 +379,6 @@ pattern=\"[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,}$\" class=\"form-control\" >
 
 **Performance:**
 
-- Webfonts laden asynchron, kurzes FOUT (Flash of Unstyled Text) möglich
 - WebP-Bilder optimiert für \"Bahnfahrt\"-Test mit reduzierter Netzwerkgeschwindigkeit
 
 **Mobile Ansicht:**
@@ -395,7 +395,7 @@ pattern=\"[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,}$\" class=\"form-control\" >
 - ✅ Bilder laden korrekt (WebP-Format)
 - ✅ Externe Links (Bootstrap CDN, RemixIcon CDN)
 
-## 🌐 Browser-Unterstützung
+## Browser-Unterstützung
 
 | Browser | Version | Status                     |
 | ------- | ------- | -------------------------- |
@@ -411,7 +411,7 @@ pattern=\"[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,}$\" class=\"form-control\" >
 - CSS Custom Properties
 - WebP Image Format
 
-## 📝 Lizenz & Disclaimer
+## Lizenz & Disclaimer
 
 **Lizenz:** MIT License
 

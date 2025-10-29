@@ -15,25 +15,21 @@
     <link
       rel="icon"
       type="image/png"
-      href="../assets/favicon/favicon-96x96.png"
+      href="assets/favicon/favicon-96x96.png"
       sizes="96x96"
     />
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="../assets/favicon/favicon.svg"
-    />
-    <link rel="shortcut icon" href="../assets/favicon/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="../assets/favicon/apple-touch-icon.png"
+      href="assets/favicon/apple-touch-icon.png"
     />
     <meta name="apple-mobile-web-app-title" content="GrünWohnen" />
-    <link rel="manifest" href="../assets/favicon/site.webmanifest" />
+    <link rel="manifest" href="assets/favicon/site.webmanifest" />
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="css/styles.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -68,7 +64,7 @@
         <a href="/" class="navbar-brand me-0 me-sm-3 d-flex align-items-center">
           <img
             class="me-lg-2"
-            src="../assets/icons/sprout.svg"
+            src="assets/icons/sprout.svg"
             alt="GrünWohnen Logo"
             width="32"
             height="32"
@@ -202,141 +198,43 @@
     <!-- ============================================================
          MAIN CONTENT
          ============================================================ -->
+    <main class="pt-5 pb-5 mb-5 container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-4">
+          <form class="mx-4">
+            <!-- Email input -->
+            <div data-mdb-input-init class="form-outline mb-4">
+              <input type="email" id="loginMail" class="form-control" />
+              <label class="form-label" for="loginMail">Email Adresse</label>
+            </div>
 
-    <main class="container pt-5">
-      <article class="legal-content">
-        <h1>
-          Informationspflicht bei Erhebung von personenbezogenen Daten gemäß
-          Art. 13 DS-GVO
-        </h1>
+            <!-- Password input -->
+            <div data-mdb-input-init class="form-outline mb-4">
+              <input type="password" id="loginPassword" class="form-control" />
+              <label class="form-label" for="loginPassword">Passwort</label>
+            </div>
 
-        <section>
-          <h2>Angaben zum Verantwortlichen (dem Unternehmen)</h2>
-          <p>
-            GrünWohnen GmbH<br />
-            Sedanstraße 47<br />
-            89077
-          </p>
-          <p>
-            <a href="mailto:kontakt@gruenwohnen.de">kontakt@gruenwohnen.de</a>
-          </p>
-        </section>
+            <!-- Submit button -->
+            <div class="d-grid">
+              <button
+                type="button"
+                data-mdb-button-init
+                data-mdb-ripple-init
+                class="btn btn-primary btn-block"
+              >
+                Anmelden
+              </button>
+            </div>
 
-        <section>
-          <h2>Ansprechpartner für datenschutzrechtliche Fragen</h2>
-          <p>
-            Bei Fragen zum Datenschutz stehen wir Ihnen unter
-            <a href="mailto:datenschutz@gruenwohnen.de"
-              >datenschutz@gruenwohnen.de</a
-            >
-            oder unter der oben angegebenen postalischen Anschrift zur
-            Verfügung.
-          </p>
-        </section>
-
-        <section>
-          <h2>
-            Verarbeitung Ihrer personenbezogenen Daten – Zwecke und
-            Rechtsgrundlagen
-          </h2>
-
-          <h3>Datenverarbeitung auf der Webseite des Unternehmens</h3>
-
-          <h4>Logfiles</h4>
-          <p>
-            Bei Aufruf unserer Webseite werden Logfiles gesetzt und bleiben für
-            30 Tage gespeichert.
-          </p>
-
-          <h3>Datenverarbeitung im Unternehmen</h3>
-          <p>
-            Wir verarbeiten personenbezogene Daten auf Grundlage von
-            datenschutzrechtlichen Regelungen der Datenschutz-Grundverordnung
-            (DS-GVO) sowie des Bundesdatenschutzgesetzgesetzes (BDSG) und ggf.
-            den Landesdatenschutzgesetzen der einzelnen Bundesländer. Die Daten
-            der folgenden Personengruppen werden von den jeweils zuständigen
-            Personen im Unternehmen zur Aufgabenerfüllung verarbeitet.
-          </p>
-          <p>Im Einzelnen bedeutet dies:</p>
-          <ul>
-            <li>
-              <strong>Kund*innendaten</strong> werden zur Durchführung und
-              Betreuung des Vertragsverhältnisses oder dem vorvertraglichen
-              Verhältnis sowie von Kontaktanfragen und zur Kommunikation auf
-              Grundlage von Art. 6 Abs. 1 S. 1 Buchstabe b) DS-GVO und Art. 6
-              Abs. 1 S. 1 Buchstabe c) DS-GVO verarbeitet.
-            </li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>Empfänger der personenbezogenen Daten</h2>
-          <p>Die Daten werden an folgende Empfänger weitergegeben:</p>
-          <p>Stripe</p>
-        </section>
-
-        <section>
-          <h2>Speicherdauer</h2>
-          <p>
-            Die von uns gespeicherten personenbezogenen Daten werden nach
-            Maßgabe von gesetzlichen Vorgaben gelöscht. Wir löschen die Daten,
-            sobald sie für den Verarbeitungszweck nicht mehr erforderlich sind,
-            eine gegebene Einwilligung widerrufen wird oder sonstige Erlaubnisse
-            entfallen.
-          </p>
-          <p>
-            Daten, die z.&nbsp;B. aus handels- oder steuerrechtlichen Gründen
-            noch aufbewahrt werden müssen oder deren Speicherung noch für die
-            Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen
-            erforderlich ist, werden gelöscht, sobald dies nicht mehr der Fall
-            ist.
-          </p>
-        </section>
-
-        <section>
-          <h2>Betroffenenrechte</h2>
-          <p>
-            Wenn wir personenbezogene Daten von Ihnen verarbeiten, haben Sie
-            folgende Betroffenenrechte:
-          </p>
-          <ul>
-            <li>
-              ein Recht auf Auskunft über die verarbeiteten Daten und auf Kopie,
-            </li>
-            <li>
-              ein Berichtigungsrecht, wenn wir falsche Daten über Sie
-              verarbeiten,
-            </li>
-            <li>
-              ein Recht auf Löschung, es sei denn, dass noch Ausnahmen greifen,
-              warum wir die Daten noch speichern, also zum Beispiel
-              Aufbewahrungspflichten oder Verjährungsfristen
-            </li>
-            <li>ein Recht auf Einschränkung der Verarbeitung,</li>
-            <li>
-              ein jederzeitiges Recht, Einwilligungen in die Datenverarbeitung
-              zu widerrufen,
-            </li>
-            <li>
-              ein Widerspruchsrecht gegen eine Verarbeitung im öffentlichen oder
-              bei berechtigtem Interesse,
-            </li>
-            <li>ein Recht auf Datenübertragbarkeit,</li>
-            <li>
-              ein Beschwerderecht bei einer Datenschutz-Aufsichtsbehörde, wenn
-              Sie finden, dass wir Ihre Daten nicht ordnungsgemäß verarbeiten.
-              Für unser Unternehmen ist der Landesbeauftragte für den
-              Datenschutz und die Informationsfreiheit Baden-Württemberg
-              zuständig. Wenn Sie sich in einem anderen Bundesland oder nicht in
-              Deutschland aufhalten, können Sie sich aber auch an die dortige
-              Datenschutzbehörde wenden.
-            </li>
-          </ul>
-        </section>
-      </article>
+            <div class="mt-2">
+              <a href="#">Passwort vergessen?</a>
+            </div>
+          </form>
+        </div>
+      </div>
     </main>
 
-    <!--============================================================
+    <!-- ============================================================
          FOOTER
          ============================================================ -->
     <footer class="border-top border-dark-subtle mt-5">
@@ -350,7 +248,7 @@
             >
               <img
                 class="bi"
-                src="../assets/icons/sprout.svg"
+                src="assets/icons/sprout.svg"
                 alt="GrünWohnen Logo"
               />
               <span>GrünWohnen</span>
@@ -466,8 +364,8 @@
         >
           <p>
             &copy; 2025 GrünWohnen. Alle Rechte vorbehalten.
-            <a href="./agb.html">AGB</a>
-            <a href="./datenschutz.html">Datenschutz</a>
+            <a href="legal/agb.html">AGB</a>
+            <a href="legal/datenschutz.html">Datenschutz</a>
           </p>
           <p class="text-danger">
             Dies ist eine Projektwebsite von Studierenden der

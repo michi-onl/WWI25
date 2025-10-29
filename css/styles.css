@@ -38,7 +38,7 @@
 
 @font-face {
   font-family: "Geist";
-  src: url("./fonts/Geist.woff2") format("woff2");
+  src: url("../assets/fonts/Geist.woff2") format("woff2");
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
@@ -46,7 +46,7 @@
 
 @font-face {
   font-family: "Geist";
-  src: url("./fonts/Geist-Italic.woff2") format("woff2");
+  src: url("../assets/fonts/Geist-Italic.woff2") format("woff2");
   font-weight: 100 900;
   font-style: italic;
   font-display: swap;
@@ -65,19 +65,13 @@
     --primary-10: oklch(from var(--primary) l c h / 0.1);
 
     /* Neutral Colors */
-    --body: oklch(0.2621 0.0095 248.19);
+    --foreground: oklch(0.2621 0.0095 248.19);
+    --body: oklch(0.9814 0.0107 118.02) !important;
+    --body-light: oklch(0.96 0.0107 118.02);
     --border: oklch(0.9335 0.0143 128.63) !important;
 
     /* Accent Colors */
     --accent: oklch(0.6824 0.1503 54.97) !important;
-  }
-
-  body {
-    background-color: oklch(0.9814 0.0107 118.02) !important;
-  }
-
-  footer {
-    background-color: oklch(0.96 0.0107 118.02);
   }
 }
 
@@ -91,19 +85,13 @@
     --primary-10: oklch(from var(--primary) l c h / 0.1);
 
     /* Neutral Colors */
-    --body: oklch(0.9109 0.007 247.9);
+    --foreground: oklch(0.9109 0.007 247.9);
+    --body: oklch(0.2814 0.0107 118.02) !important;
+    --body-light: oklch(0.26 0.0107 118.02);
     --border: oklch(0.3219 0.0205 139.43) !important;
 
     /* Accent Colors */
     --accent: oklch(0.6824 0.1503 54.97) !important;
-  }
-
-  body {
-    background-color: oklch(0.2814 0.0107 118.02) !important;
-  }
-
-  footer {
-    background-color: oklch(0.26 0.0107 118.02);
   }
 }
 
@@ -120,11 +108,18 @@
 
 /* 2.2 Layout
    -------------------------------------------------------------------------- */
+body {
+  background-color: var(--body) !important;
+}
 
 nav {
   position: sticky !important;
   top: 0.5rem !important;
   z-index: 9999;
+}
+
+footer {
+  background-color: var(--body-light) !important;
 }
 
 /* =============================================================================
@@ -159,7 +154,7 @@ nav {
   border-radius: 28px !important;
   background-color: var(--border) !important;
   border-color: var(--border) !important;
-  color: var(--body) !important;
+  color: var(--foreground) !important;
 }
 
 .btn-secondary:hover {
@@ -258,7 +253,7 @@ nav {
 /* Feature Badge */
 .feature-badge {
   background-color: var(--border) !important;
-  color: var(--body) !important;
+  color: var(--foreground) !important;
   border: none !important;
   padding: 0.375rem 0.75rem;
   font-size: 0.875rem;
@@ -270,7 +265,7 @@ nav {
 .apartments-badge {
   background-color: transparent !important;
   border: 1px solid var(--border) !important;
-  color: var(--body) !important;
+  color: var(--foreground) !important;
   padding: 0.375rem 0.75rem;
   font-size: 0.875rem;
   font-weight: 500;
@@ -628,7 +623,7 @@ nav {
 
 .team-cta-card {
   background-color: var(--primary) !important;
-  color: var(--body) !important;
+  color: var(--foreground) !important;
 }
 
 .team-cta-text {
