@@ -713,7 +713,9 @@ footer {
   color: var(--primary) !important;
   transition: color 0.2s ease;
 }
-
+.social-link {
+  text-decoration: none;
+}
 /* 5.8 Bewerben Page
    -------------------------------------------------------------------------- */
 
