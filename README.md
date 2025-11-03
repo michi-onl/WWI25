@@ -20,7 +20,7 @@
 - [Testhinweise](#testhinweise)
 - [Browser-Unterstützung](#browser-unterstützung)
 
-## 🌱 Über das Projekt
+## Über das Projekt
 
 GrünWohnen ist eine statische Website für nachhaltige Studentenwohnungen in Aalen, Heidenheim, Ulm und Herbrechtingen. Das Projekt entstand im Rahmen des Web-Design-Kurses an der DHBW Heidenheim.
 
@@ -38,7 +38,6 @@ GrünWohnen ist eine statische Website für nachhaltige Studentenwohnungen in Aa
 - **CSS3**: Custom Properties, OKLCH-Farbraum, Media Queries
 - **JavaScript**: Minimal (nur für Theme-Detection)
 - **Bootstrap 5.3.8**: Grid-System und UI-Komponenten
-- **popper.js 2.9.2**: Pop-out engine verwendet von Bootstrap
 - **RemixIcon 4.1.0**: Icon-Set
 - **Custom Fonts**: Geist Font Family (Variable Font)
 
@@ -71,7 +70,7 @@ python -m http.server 8000
 npx http-server
 ```
 
-## 📁 Projekt-Struktur
+## Projekt-Struktur
 
 ```
 WWI25/
@@ -289,7 +288,7 @@ pattern=\"[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,}$\" class=\"form-control\" >
 
 **Vorteil:** Browser-native Validierung, kein JavaScript nötig
 
-## 🎨 Design-System
+## Design-System
 
 ### Farbsystem (OKLCH)
 
@@ -348,7 +347,7 @@ pattern=\"[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,}$\" class=\"form-control\" >
 }
 ```
 
-## 🧪 Testhinweise
+## Testhinweise
 
 ### Start der Website
 
