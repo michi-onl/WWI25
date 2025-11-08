@@ -272,7 +272,7 @@ WWI25/
 ```html
 <img src=\"assets/images/modernes-nachhaltiges-studentenwohnheim.webp\"
 alt=\"Modernes Studentenwohnheim mit Solarpanelen und Dachbegrünung\"
-class=\"img-fluid rounded\" >
+class=\"img-fluid\" >
 ```
 
 **Accessibility:** Detaillierte Alt-Texte für Screen Reader
