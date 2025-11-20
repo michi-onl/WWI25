@@ -61,7 +61,11 @@
     <nav class="navbar navbar-expand-lg glass mx-2">
       <div class="container-fluid">
         <!-- Logo -->
-        <a href="/" class="navbar-brand me-0 me-sm-3 d-flex align-items-center">
+        <a
+          href="/"
+          class="navbar-brand me-0 me-sm-3 d-flex align-items-center"
+          aria-current="page"
+        >
           <img
             class="me-lg-2"
             src="assets/icons/sprout.svg"
@@ -81,19 +85,12 @@
               <a
                 href="/login.html"
                 class="d-none d-sm-flex nav-link text-muted"
-                aria-disabled="true"
               >
                 Anmelden
               </a>
             </li>
             <li class="nav-item">
-              <a
-                href="/bewerben.html"
-                class="btn btn-primary"
-                aria-current="page"
-              >
-                Bewerben
-              </a>
+              <a href="/bewerben.html" class="btn btn-primary"> Bewerben </a>
             </li>
           </ul>
 
@@ -157,12 +154,7 @@
             </li>
             <!-- Mobile-only Anmelden Link -->
             <li class="nav-item d-sm-none">
-              <a
-                href="/login.html"
-                class="nav-link text-muted"
-                aria-disabled="true"
-                tabindex="-1"
-              >
+              <a href="/login.html" class="nav-link text-muted" tabindex="-1">
                 <i class="ri-login-box-line me-2"></i>
                 Anmelden
               </a>
@@ -172,21 +164,12 @@
           <!-- Desktop Action Buttons -->
           <ul class="navbar-nav d-none d-lg-flex">
             <li class="nav-item">
-              <a
-                href="/login.html"
-                class="nav-link text-muted"
-                aria-disabled="true"
-                tabindex="-1"
-              >
+              <a href="/login.html" class="nav-link text-muted" tabindex="-1">
                 Anmelden
               </a>
             </li>
             <li class="nav-item">
-              <a
-                href="/bewerben.html"
-                class="btn btn-primary ms-2"
-                aria-current="page"
-              >
+              <a href="/bewerben.html" class="btn btn-primary ms-2">
                 Bewerben
               </a>
             </li>
@@ -399,6 +382,7 @@
             <a
               href="/"
               class="footer-logo link-body-emphasis text-decoration-none d-flex align-items-center gap-2 fs-5 fw-bold"
+              aria-current="page"
             >
               <img
                 class="bi"
@@ -407,7 +391,7 @@
               />
               <span>GrünWohnen</span>
             </a>
-            <p class="footer-tagline small text-muted mt-2">
+            <p class="small text-muted mt-2">
               Nachhaltiges Wohnen für die nächste Generation
             </p>
           </div>
