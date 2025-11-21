@@ -1,9 +1,6 @@
 /* =============================================================================
-   CONFIGURATION
+   FONTS & COLOR SYSTEM
 ============================================================================= */
-
-/* Custom Fonts
-   -------------------------------------------------------------------------- */
 
 @font-face {
   font-family: "Geist";
@@ -21,43 +18,30 @@
   font-display: swap;
 }
 
-/* Color System (OKLCH)
-   -------------------------------------------------------------------------- */
-
 @media (prefers-color-scheme: light) {
   :root {
-    /* Primary Colors */
     --primary: oklch(0.4598 0.1116 152.04) !important;
     --primary-75: oklch(from var(--primary) l c h / 0.75);
     --primary-50: oklch(from var(--primary) l c h / 0.5);
     --primary-25: oklch(from var(--primary) l c h / 0.25);
     --primary-10: oklch(from var(--primary) l c h / 0.1);
-
-    /* Neutral Colors */
     --foreground: oklch(0.2621 0.0095 248.19);
     --background: oklch(0.98 0.0107 118.02) !important;
     --border: oklch(0.9335 0.0143 128.63) !important;
-
-    /* Accent Colors */
     --accent: oklch(0.6824 0.1503 54.97) !important;
   }
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    /* Primary Colors */
     --primary: oklch(59.779% 0.11836 155.348 / 0.5) !important;
     --primary-75: oklch(from var(--primary) l c h / 0.75);
     --primary-50: oklch(from var(--primary) l c h / 0.5);
     --primary-25: oklch(from var(--primary) l c h / 0.25);
     --primary-10: oklch(from var(--primary) l c h / 0.1);
-
-    /* Neutral Colors */
     --foreground: oklch(0.9109 0.007 247.9);
     --background: oklch(0.2814 0.0107 118.02) !important;
     --border: oklch(0.3219 0.0205 139.43) !important;
-
-    /* Accent Colors */
     --accent: oklch(0.6824 0.1503 54.97) !important;
   }
 }
@@ -66,15 +50,10 @@
    BASE STYLES
 ============================================================================= */
 
-/* Global Settings
-   -------------------------------------------------------------------------- */
-
 * {
   font-family: "Geist", sans-serif !important;
 }
 
-/* Layout
-   -------------------------------------------------------------------------- */
 body {
   background-color: var(--background) !important;
 }
@@ -89,19 +68,20 @@ nav {
    COMPONENTS
 ============================================================================= */
 
-/* Navigation
-   -------------------------------------------------------------------------- */
-
-.navbar-toggler {
+.navbar-toggler,
+.alert,
+.btn-primary,
+.btn-secondary,
+.card,
+.custom-badge,
+.sustainability-badge,
+.feature-badge,
+.apartments-badge,
+.apartment-badge {
   border-radius: 32px !important;
 }
 
-/* Buttons
-   -------------------------------------------------------------------------- */
-
-/* Primary Button */
 .btn-primary {
-  border-radius: 32px !important;
   background-color: var(--primary) !important;
   border-color: var(--primary) !important;
 }
@@ -112,9 +92,7 @@ nav {
   transition: all 0.3s ease;
 }
 
-/* Secondary Button */
 .btn-secondary {
-  border-radius: 32px !important;
   background-color: var(--border) !important;
   border-color: var(--border) !important;
   color: var(--foreground) !important;
@@ -125,20 +103,18 @@ nav {
   transition: all 0.3s ease;
 }
 
-/* Cards
-   -------------------------------------------------------------------------- */
-
 .card {
   transition: transform 0.2s ease;
-  border-radius: 32px !important;
 }
 
-.hovercard:hover {
+.hovercard:hover,
+.apartment-card:hover {
   transform: translateY(-4px);
 }
 
-/* Forms
-   -------------------------------------------------------------------------- */
+.apartment-card:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
 
 .form-control,
 .form-select {
@@ -147,7 +123,8 @@ nav {
 }
 
 .form-control:focus,
-.form-select:focus {
+.form-select:focus,
+.form-check-input:focus {
   border-color: var(--primary) !important;
   box-shadow: 0 0 0 0.25rem var(--primary-25) !important;
 }
@@ -162,17 +139,9 @@ nav {
   border-color: var(--primary) !important;
 }
 
-.form-check-input:focus {
-  border-color: var(--primary) !important;
-  box-shadow: 0 0 0 0.25rem var(--primary-25) !important;
-}
-
 .card-header {
   border-radius: 32px 32px 0 0 !important;
 }
-
-/* Footer
-   -------------------------------------------------------------------------- */
 
 .footer-logo {
   display: inline-flex;
@@ -180,37 +149,30 @@ nav {
 }
 
 .footer-link:hover,
-.social-link:hover {
+.social-link:hover,
+.team-social-link:hover,
+.contact-link:hover {
   color: var(--primary) !important;
   transition: color 0.2s ease;
 }
 
-/* Badges
-   -------------------------------------------------------------------------- */
-
-/* Custom Badge */
-.custom-badge {
+/* Badges */
+.custom-badge,
+.sustainability-badge {
   background-color: var(--primary-25);
   border: 1px solid var(--primary-75);
   padding: 0.375rem 0.75rem;
   font-size: 0.875rem;
   font-weight: 500;
-  border-radius: 32px !important;
   color: var(--foreground) !important;
 }
 
-/* Sustainability Badge */
 .sustainability-badge {
   background-color: var(--primary-25) !important;
   color: var(--primary) !important;
   border: 1px solid var(--primary-50) !important;
-  padding: 0.375rem 0.75rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  border-radius: 32px !important;
 }
 
-/* Feature Badge */
 .feature-badge {
   background-color: var(--border) !important;
   color: var(--foreground) !important;
@@ -218,10 +180,8 @@ nav {
   padding: 0.375rem 0.75rem;
   font-size: 0.875rem;
   font-weight: 500;
-  border-radius: 32px !important;
 }
 
-/* Apartments Badge */
 .apartments-badge {
   background-color: transparent !important;
   border: 1px solid var(--border) !important;
@@ -235,12 +195,19 @@ nav {
   white-space: nowrap;
 }
 
+.apartment-badge {
+  top: 1rem;
+  right: 1rem;
+  background-color: var(--primary) !important;
+  color: white;
+  padding: 0.375rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
 /* =============================================================================
    UTILITIES
 ============================================================================= */
-
-/* Glassmorphism
-   -------------------------------------------------------------------------- */
 
 .glass {
   background: rgba(255, 255, 255, 0.1);
@@ -265,9 +232,6 @@ nav {
   }
 }
 
-/* Icons
-   -------------------------------------------------------------------------- */
-
 .icon,
 .icon-small,
 .icon-large {
@@ -275,9 +239,8 @@ nav {
   flex-shrink: 0;
 }
 
-.icon-box {
-  height: 3rem;
-  width: 3rem;
+.icon-box,
+.cert-icon {
   border-radius: 32px;
   background-color: var(--primary-10);
   display: flex;
@@ -285,32 +248,46 @@ nav {
   justify-content: center;
 }
 
-/* Animations
-   -------------------------------------------------------------------------- */
+.icon-box {
+  height: 3rem;
+  width: 3rem;
+}
+
+.cert-icon {
+  height: 4rem;
+  width: 4rem;
+}
+
+.cert-icon .icon-large {
+  color: var(--primary);
+}
 
 .transition {
   transition: all 0.3s ease;
 }
 
 /* =============================================================================
-   PAGE-SPECIFIC STYLES
+   PAGE-SPECIFIC
 ============================================================================= */
 
-/* Index Page
-   -------------------------------------------------------------------------- */
-
-/* Hero Section */
+/* Index */
 .hero-section {
   min-height: 500px;
 }
 
-.hero-image {
-  height: 400px;
+.hero-image,
+.impact-image,
+.green-image {
   overflow: hidden;
   border-radius: 32px;
 }
 
-.hero-image img {
+.hero-image {
+  height: 400px;
+}
+
+.hero-image img,
+.impact-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -322,24 +299,28 @@ nav {
   }
 }
 
-/* Features Section */
-.features-section {
+.features-section,
+.certification-section {
   background-color: rgba(0, 0, 0, 0.02);
 }
 
-.feature-icon {
-  width: 3rem;
-  height: 3rem;
+.feature-icon,
+.impact-icon,
+.contact-icon-wrapper {
   background-color: var(--primary-25);
   color: var(--primary);
   border-radius: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.feature-icon {
+  width: 3rem;
+  height: 3rem;
   font-size: 1.5rem;
 }
 
-/* Impact Section */
 .impact-section {
   padding-top: 5rem;
   padding-bottom: 5rem;
@@ -347,49 +328,34 @@ nav {
 
 .impact-image {
   height: 400px;
-  overflow: hidden;
-  border-radius: 32px;
-}
-
-.impact-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 .impact-icon {
   width: 2.5rem;
   height: 2.5rem;
-  background-color: var(--primary-25);
-  color: var(--primary);
-  border-radius: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-size: 1.25rem;
 }
 
-/* CTA Section */
-.cta-section {
+.cta-section,
+.team-cta-card {
   background-color: var(--primary);
 }
 
-.cta-text {
+.cta-text,
+.team-cta-text {
   opacity: 0.9;
 }
 
-/* Apartments Page
-   -------------------------------------------------------------------------- */
-
-.apartment-card {
-  transition: all 0.3s ease;
+.team-cta-text {
+  opacity: 0.8;
 }
 
-.apartment-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+.team-cta-card {
+  background-color: var(--primary) !important;
+  color: var(--foreground) !important;
 }
 
+/* Apartments */
 .apartment-image-wrapper {
   height: 12rem;
   overflow: hidden;
@@ -406,17 +372,6 @@ nav {
   transform: scale(1.05);
 }
 
-.apartment-badge {
-  top: 1rem;
-  right: 1rem;
-  background-color: var(--primary) !important;
-  color: white;
-  padding: 0.375rem 0.75rem;
-  border-radius: 32px !important;
-  font-size: 0.875rem;
-  font-weight: 500;
-}
-
 .apartment-co2 {
   color: var(--primary);
 }
@@ -425,9 +380,7 @@ nav {
   flex-shrink: 0;
 }
 
-/* Standorte Page
-   -------------------------------------------------------------------------- */
-
+/* Standorte */
 .location-card {
   overflow: hidden;
   border: 1px solid var(--border);
@@ -468,25 +421,17 @@ nav {
   color: var(--primary) !important;
 }
 
-.info-box {
+.info-box,
+.faq-cta-box {
   background-color: var(--border);
   border-radius: 32px;
 }
 
-@media (prefers-color-scheme: dark) {
-  .info-box {
-    background-color: var(--border);
-  }
-}
-
-/* Nachhaltigkeit Page
-   -------------------------------------------------------------------------- */
-
+/* Nachhaltigkeit */
 .sustainability-intro {
   max-width: 48rem;
 }
 
-/* Hero Stats Cards */
 .stat-card-primary {
   background-color: var(--primary) !important;
   border: none;
@@ -497,15 +442,24 @@ nav {
   border: none;
 }
 
-/* Stat Box */
 .stat-box {
   background-color: rgba(0, 0, 0, 0.03);
   border-radius: 32px;
 }
 
 @media (prefers-color-scheme: dark) {
-  .stat-box {
+  .stat-box,
+  .certification-section,
+  .features-section {
     background-color: rgba(255, 255, 255, 0.03);
+  }
+
+  .certification-section {
+    background-color: rgba(255, 255, 255, 0.02);
+  }
+
+  .features-section {
+    background-color: rgba(255, 255, 255, 0.02);
   }
 }
 
@@ -513,40 +467,11 @@ nav {
   color: var(--primary) !important;
 }
 
-/* Green Image */
 .green-image {
   position: relative;
   height: 18rem;
-  overflow: hidden;
-  border-radius: 32px;
 }
 
-/* Certification Section */
-.certification-section {
-  background-color: rgba(0, 0, 0, 0.02);
-}
-
-@media (prefers-color-scheme: dark) {
-  .certification-section {
-    background-color: rgba(255, 255, 255, 0.02);
-  }
-}
-
-.cert-icon {
-  height: 4rem;
-  width: 4rem;
-  border-radius: 32px;
-  background-color: var(--primary-10);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.cert-icon .icon-large {
-  color: var(--primary);
-}
-
-/* Sections Spacing */
 .sections-wrapper section {
   margin-bottom: 4rem;
 }
@@ -555,9 +480,7 @@ nav {
   margin-bottom: 0;
 }
 
-/* Team Page
-   -------------------------------------------------------------------------- */
-
+/* Team */
 .team-image-wrapper {
   position: relative;
   height: 16rem;
@@ -574,26 +497,7 @@ nav {
   color: var(--primary);
 }
 
-.team-social-link {
-  transition: color 0.2s ease;
-}
-
-.team-social-link:hover {
-  color: var(--primary) !important;
-}
-
-.team-cta-card {
-  background-color: var(--primary) !important;
-  color: var(--foreground) !important;
-}
-
-.team-cta-text {
-  opacity: 0.8;
-}
-
-/* FAQ Page
-   -------------------------------------------------------------------------- */
-
+/* FAQ */
 .accordion-flush .faq-item {
   border: 1px solid var(--border) !important;
   border-radius: 32px !important;
@@ -643,10 +547,6 @@ nav {
   transition: height 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
-.faq-cta-box {
-  background-color: var(--border);
-}
-
 .faq-link {
   color: var(--primary);
   text-decoration: none;
@@ -656,30 +556,8 @@ nav {
   text-decoration: underline;
 }
 
-/* Kontakt Page
-   -------------------------------------------------------------------------- */
-
+/* Kontakt */
 .contact-icon-wrapper {
   width: 2.5rem;
   height: 2.5rem;
-  border-radius: 32px;
-  background-color: var(--primary-10);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--primary);
 }
-
-.contact-link:hover {
-  color: var(--primary) !important;
-  transition: color 0.2s ease;
-}
-
-/* Bewerben Page
-   -------------------------------------------------------------------------- */
-
-/* Specific form styles already covered in section 3.4 Forms */
-
-/* =============================================================================
-   END OF STYLESHEET
-============================================================================= */
