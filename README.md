@@ -134,7 +134,7 @@ MIT License – siehe [LICENSE](LICENSE)
 
 ## Disclaimer
 
-Dies ist eine Projektwebsite von Studierenden der DHBW Heidenheim für Lernzwecke. Sie repräsentiert nicht die Hochschule und steht in keiner offiziellen Verbindung zur DHBW.
+Dies ist eine Projektwebsite von Studierenden der DHBW Heidenheim für Lernzwecke.
 
 ---
 
